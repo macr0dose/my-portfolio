@@ -43,7 +43,7 @@ const Features = () => {
   );
 };
 
-type Featureitem = {
+type FeatureItem = {
   title: string;
   icon: string;
   description: string;
