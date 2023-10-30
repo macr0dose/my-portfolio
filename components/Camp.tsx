@@ -109,7 +109,7 @@ const Camp = () => {
       </div>
       <button
         onClick={goToNextCamp}
-        className="absolute top-1/2 left-10 pb-20 transform -translate-y-1/2 p-4 rounded-full"
+        className="absolute top-1/3 left-10 transform -translate-y-1/2 p-4 rounded-full"
       >
         <Image src="/next-icon.png" alt="next" width={50} height={50} />
       </button>
