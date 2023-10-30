@@ -78,19 +78,22 @@ const CampSite = ({
 // Camp component
 const Camp = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const scrollContainerRef = useRef(null);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   const goToNextCamp = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % campData.length);
     if (scrollContainerRef.current) {
       const scrollContainer = scrollContainerRef.current;
-      const campItemWidth = scrollContainer.firstChild.offsetWidth;
-      const nextScrollPosition =
-        ((currentIndex + 1) % campData.length) * campItemWidth;
-      scrollContainer.scrollTo({
-        left: nextScrollPosition,
-        behavior: "smooth",
-      });
+      const firstChild = scrollContainer.firstChild as HTMLElement | null;
+      if (firstChild) {
+        const campItemWidth = firstChild.offsetWidth;
+        const nextScrollPosition =
+          ((currentIndex + 1) % campData.length) * campItemWidth;
+        scrollContainer.scrollTo({
+          left: nextScrollPosition,
+          behavior: "smooth",
+        });
+      }
     }
   };
 
