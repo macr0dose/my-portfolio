@@ -7,11 +7,12 @@ import Button from "./Button";
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
 
+import { MouseEvent } from "react";
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const smoothScroll = (e, href) => {
-    // Prevent default anchor click behavior
+  const smoothScroll = (e: MouseEvent<HTMLButtonElement>, href: string) => {
     e.preventDefault();
     const section = document.querySelector(href);
     if (section) {
@@ -23,7 +24,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav id='navbar' className="flex justify-between items-center max-w-full px-4 py-5 relative z-20 padding-container max-container">
+    <nav
+      id="navbar"
+      className="flex justify-between items-center max-w-full px-4 py-5 relative z-20 padding-container max-container"
+    >
       <Link href="/" onClick={(e) => smoothScroll(e, "#navbar")}>
         <Image
           src="/techrocket.png"
