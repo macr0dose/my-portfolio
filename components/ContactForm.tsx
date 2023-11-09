@@ -1,15 +1,10 @@
 "use client";
 
 import { useState, Fragment } from "react";
-import { Dialog, Switch, Transition } from "@headlessui/react";
+import { Dialog, Transition } from "@headlessui/react";
 import Button from "./Button";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export function ContactForm() {
-  const [agreed, setAgreed] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const closeModal = () => {
