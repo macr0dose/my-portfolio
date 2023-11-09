@@ -4,7 +4,9 @@ import Image from "next/image";
 import Button from "./Button";
 import ContactForm from "./ContactForm";
 
-const smoothScroll = (e, href) => {
+import { MouseEvent } from 'react';
+
+const smoothScroll = (e: MouseEvent<HTMLButtonElement>, href: string) => {
   // Prevent default anchor click behavior
   e.preventDefault();
   const section = document.querySelector(href);
