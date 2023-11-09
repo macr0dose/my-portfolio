@@ -1,86 +1,121 @@
 // NAVIGATION
 export const NAV_LINKS = [
-    { href: '/', key: 'home', label: 'Home' },
-    { href: '/', key: 'how_hilink_work', label: 'How Hilink Works?' },
-    { href: '/', key: 'services', label: 'Services' },
-    { href: '/', key: 'pricing ', label: 'Pricing ' },
-    { href: '/', key: 'contact_us', label: 'Contact Us' },
-  ];
-  
-  // CAMP SECTION
-  export const PEOPLE_URL = [
-    '/person-1.png',
-    '/person-2.png',
-    '/person-3.png',
-    '/person-4.png',
-  ];
-  
-  // FEATURES SECTION
-  export const FEATURES = [
-    {
-      title: 'Real maps can be offline',
-      icon: '/map.svg',
-      variant: 'green',
-      description:
-        'We provide a solution for you to be able to use our application when climbing, yes offline maps you can use at any time there is no signal at the location',
-    },
-    {
-      title: 'Set an adventure schedule',
-      icon: '/calendar.svg',
-      variant: 'green',
-      description:
-        "Schedule an adventure with friends. On holidays, there are many interesting offers from Hilink. That way, there's no more discussion",
-    },
-    {
-      title: 'Technology using augmented reality',
-      icon: '/tech.svg',
-      variant: 'green',
-      description:
-        'Technology uses augmented reality as a guide to your hiking trail in the forest to the top of the mountain. Already supported by the latest technology without an internet connection',
-    },
-    {
-      title: 'Many new locations every month',
-      icon: '/location.svg',
-      variant: 'orange',
-      description:
-        'Lots of new locations every month, because we have a worldwide community of climbers who share their best experiences with climbing',
-    },
-  ];
-  
-  // FOOTER SECTION
-  export const FOOTER_LINKS = [
-    {
-      title: 'Learn More',
-      links: [
-        'About Hilink',
-        'Press Releases',
-        'Environment',
-        'Jobs',
-        'Privacy Policy',
-        'Contact Us',
-      ],
-    },
-    {
-      title: 'Our Community',
-      links: ['Climbing xixixi', 'Hiking hilink', 'Hilink coastclimb'],
-    },
-  ];
-  
-  export const FOOTER_CONTACT_INFO = {
-    title: 'Contact Us',
+  { href: "#navbar", key: "home", label: "Home" },
+  { href: "#projects", key: "my_projects", label: "My Projects" },
+  { href: "#about", key: "about", label: "About Me" },
+  { href: "#contact", key: "contact_me", label: "Contact Me" },
+];
+
+// SKILLSET SECTION
+export const SKILLSET = [
+  {
+    title: "Languages",
+    icon: "/map.svg",
+    variant: "green",
+    description: "HTML5, CSS3, JavaScript, TypeScript, React, NextJS , Vite, C and more",
+  },
+  {
+    title: "Tools",
+    icon: "/calendar.svg",
+    variant: "green",
+    description:
+      "Bootstrap, Github, Grafbase, HeadlessUI, mongoDB, Netlify, NodeJS, Prisma, RapidAPI, Sanity, ShadCN, TailwindCSS, Vercel",
+  },
+  {
+    title: "Solutions",
+    icon: "/tech.svg",
+    variant: "green",
+    description:
+      "My skills are constantly expanding, with a desire to thoroughly understand the vast selection of tools we have available while implementing best practices",
+  },
+];
+
+// PROJECTS SECTION
+export const PROJECTS = [
+  {
+    title: "Concept landing page UI/UX",
+    href: "https://nike-tailwind-one.vercel.app",
+    icon: "/project1.svg",
+    backgroundImage: "//project1.png",
+    variant: "green",
+    description: "",
+  },
+  {
+    title: "AI Article Summarizer that will save your results",
+    href: "https://ai-summarize-one.netlify.app",
+    icon: "/project2.svg",
+    backgroundImage: "/project2.png",
+    variant: "green",
+    description: "",
+  },
+  {
+    title: "AI Prompt Sharing using Google login",
+    href: "https://promptshare-one.vercel.app/",
+    icon: "/project3.svg",
+    variant: "green",
+    description: "",
+  },
+  {
+    title: "Car rental UI/UX using API calls",
+    href: "https://car-showcase-demo-one.vercel.app/",
+    icon: "/project4.svg",
+    variant: "orange",
+    description: "",
+  },
+  {
+    title: "Camping and Adventure landing page UI/UX",
+    href: "http://camp-travel-one.vercel.app",
+    icon: "/project5.svg",
+    variant: "orange",
+    description: "",
+  },
+  {
+    title: "A functional Dribble clone with Google login",
+    href: "https://nextjs13-flexibble-one.vercel.app/",
+    icon: "/project6.svg",
+    variant: "orange",
+    description: "",
+  },
+];
+
+// FOOTER SECTION
+export const FOOTER_LINKS = [
+  {
+    title: "Navigation",
     links: [
-      { label: 'Admin Officer', value: '123-456-7890' },
-      { label: 'Email Officer', value: 'hilink@coastclimb.com' },
+      {
+        label: "Home",
+        value: "#navbar",
+      },
+      {
+        label: "Projects",
+        value: "#projects",
+      },
+      {
+        label: "About Me",
+        value: "#about",
+      },
     ],
-  };
-  
-  export const SOCIALS = {
-    title: 'Social',
-    links: [
-      '/facebook.svg',
-      '/instagram.svg',
-      '/twitter.svg',
-      '/youtube.svg',
-      '/wordpress.svg',
-    ],
-  };
+  },
+];
+
+export const FOOTER_CONTACT_INFO = {
+  title: "Contact Me",
+  links: [
+    {
+      label: "Email",
+      value: "mailto:macr0dose00@gmail.com",
+      icon: "/mail.svg",
+    },
+    {
+      label: "Twitter",
+      value: "http://www.twitter.com/macr0dose00",
+      icon: "/twitter.svg",
+    },
+  ],
+};
+
+export const SOCIALS = {
+  title: "Social",
+  links: ["/twitter.svg", "/mail.svg", "/instagram.svg"],
+};
