@@ -34,7 +34,7 @@ export function ContactForm() {
   };
 
 
-
+  
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -92,8 +92,8 @@ export function ContactForm() {
                     </div>
 
 
-                    {/* <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
-      <input type="hidden" name="form-name" value="contact" />
+                    <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+      {/* <input type="hidden" name="form-name" value="contact" />
       <p>
         <label htmlFor="name">Your Name:</label>
         <input type="text" id="name" name="name" required />
@@ -116,13 +116,13 @@ export function ContactForm() {
 
 
                     
-                    <form
+                    {/* {/* <form
                       name="contact"
                       method="POST"
                       data-netlify="true"
                       action="/thanks" // You can create a thank you page to redirect after form submission.
                       className="mx-auto mt-16 max-w-xl sm:mt-10"
-                    >
+                    > */}
                       <input type="hidden" name="form-name" value="contact" />
                       <div className="gap-x-8 gap-y-6">
                         <div>
@@ -178,7 +178,7 @@ export function ContactForm() {
                           Send Message
                         </button>
                       </div>
-                    </form>
+                    </form> */}
                     {/* <div className="mt-4">
                       <button
                         type="button"
