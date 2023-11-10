@@ -34,7 +34,7 @@ export function ContactForm() {
   };
 
 
-  
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -92,7 +92,7 @@ export function ContactForm() {
                     </div>
 
 
-                    <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+                    {/* <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
       <input type="hidden" name="form-name" value="contact" />
       <p>
         <label htmlFor="name">Your Name:</label>
@@ -109,14 +109,14 @@ export function ContactForm() {
       <p>
         <button type="submit">Send</button>
       </p>
-    </form>
+    </form> */}
 
 
 
 
 
                     
-                    {/* <form
+                    <form
                       name="contact"
                       method="POST"
                       data-netlify="true"
@@ -178,7 +178,7 @@ export function ContactForm() {
                           Send Message
                         </button>
                       </div>
-                    </form> */}
+                    </form>
                     {/* <div className="mt-4">
                       <button
                         type="button"
