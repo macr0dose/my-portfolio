@@ -52,6 +52,9 @@ export function ContactForm() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
+
+
+
                 <Dialog.Panel className="max-w-md transform overflow-hidden rounded-2xl text-left align-middle shadow-2xl transition-all bg-white ">
                   <div className="isolate bg-white px-6 py-14 sm:py-12 lg:px-4 rounded-xl">
                     <div className="mx-auto max-w-2xl text-center">
