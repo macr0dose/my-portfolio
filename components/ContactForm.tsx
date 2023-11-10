@@ -92,7 +92,7 @@ export function ContactForm() {
                     </div>
 
 
-                    <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+                    <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} action="/thanks">
       {/* <input type="hidden" name="form-name" value="contact" />
       <p>
         <label htmlFor="name">Your Name:</label>
