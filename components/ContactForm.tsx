@@ -6,7 +6,7 @@ import Button from "./Button";
 
 export function ContactForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent the default form submit
@@ -31,17 +31,23 @@ export function ContactForm() {
     } catch (error) {
       console.error('An error occurred:', error);
     }
-  };
 
 
-  
+  setShowSuccessMessage(true);
+  setTimeout(() => {
+    setShowSuccessMessage(false); // Hide the message after some time
+    setIsModalOpen(false); // Close the modal as well
+  }, 5000); // 5 seconds displayed
+};
+
   const closeModal = () => {
     setIsModalOpen(false);
+    setShowSuccessMessage(false); // Also reset the success message state
   };
 
   const openModal = () => {
     setIsModalOpen(true);
-  };
+  }
 
   return (
     <>
@@ -92,37 +98,7 @@ export function ContactForm() {
                     </div>
 
 
-                    <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} action="/thanks">
-      {/* <input type="hidden" name="form-name" value="contact" />
-      <p>
-        <label htmlFor="name">Your Name:</label>
-        <input type="text" id="name" name="name" required />
-      </p>
-      <p>
-        <label htmlFor="email">Your Email:</label>
-        <input type="email" id="email" name="email" required />
-      </p>
-      <p>
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form> */}
-
-
-
-
-
-                    
-                    {/* {/* <form
-                      name="contact"
-                      method="POST"
-                      data-netlify="true"
-                      action="/thanks" // You can create a thank you page to redirect after form submission.
-                      className="mx-auto mt-16 max-w-xl sm:mt-10"
-                    > */}
+                    <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-10">
                       <input type="hidden" name="form-name" value="contact" />
                       <div className="gap-x-8 gap-y-6">
                         <div>
@@ -178,7 +154,7 @@ export function ContactForm() {
                           Send Message
                         </button>
                       </div>
-                    </form> 
+                    </form>
                     {/* <div className="mt-4">
                       <button
                         type="button"
@@ -195,6 +171,14 @@ export function ContactForm() {
           </div>
         </Dialog>
       </Transition>
+      {/* Success message dialog */}
+      {showSuccessMessage && (
+        <div className="fixed inset-0 z-40 flex items-center justify-center">
+          <div className="max-w-md px-4 py-2 text-center text-white bg-green-500 rounded-md">
+            Your message has been sent successfully!
+          </div>
+        </div>
+      )}
     </>
   );
 }
