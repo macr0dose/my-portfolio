@@ -62,15 +62,14 @@ export function ContactForm() {
                         I'll be on the other side waiting to chat!
                       </p>
                     </div>
-                    {/* Netlify form integration starts here */}
                     <form
-        name="contact"
-        method="POST"
-        data-netlify="true" // This tells Netlify to handle this form
-        action="/thank-you" // Redirect to this path after submission
-        className="mx-auto mt-16 max-w-xl sm:mt-10"
+                      name="contact"
+                      method="POST"
+                      data-netlify="true"
+                      onSubmit="submit"
+                      action="/thanks" // You can create a thank you page to redirect after form submission.
+                      className="mx-auto mt-16 max-w-xl sm:mt-10"
                     >
-                      {/* The following hidden input is required for Netlify forms to work correctly */}
                       <input type="hidden" name="form-name" value="contact" />
                       <div className="gap-x-8 gap-y-6">
                         <div>
@@ -84,7 +83,7 @@ export function ContactForm() {
                               id="name"
                               autoComplete="name"
                               required
-                              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-50 sm:text-sm sm:leading-6"
+                              className="block w-full rounded-md border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             />
                           </div>
                         </div>
@@ -99,7 +98,7 @@ export function ContactForm() {
                               id="email"
                               autoComplete="email"
                               required
-                              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-50 sm:text-sm sm:leading-6"
+                              className="block w-full rounded-md border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             />
                           </div>
                         </div>
@@ -111,10 +110,9 @@ export function ContactForm() {
                             <textarea
                               name="message"
                               id="message"
-                              rows={4}
+                              rows="4"
                               required
-                              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-50 sm:text-sm sm:leading-6"
-                              placeholder="Hi! Let's build something great :)"
+                              className="block w-full rounded-md border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             />
                           </div>
                         </div>
@@ -122,17 +120,16 @@ export function ContactForm() {
                       <div className="mt-10">
                         <button
                           type="submit"
-                          className="block w-full rounded-xl bg-orange-50 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-md border-2 border-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                          className="block w-full rounded-md bg-orange-500 px-3.5 py-2.5 text-center text-sm font-medium text-white shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
                         >
-                          Let's talk
+                          Send Message
                         </button>
                       </div>
                     </form>
-                    {/* Netlify form integration ends here */}
                     <div className="mt-4">
                       <button
                         type="button"
-                        className="inline-flex justify-center rounded-md bg-orange-50 px-4 py-2 text-sm font-medium text-white shadow-md border-2 border-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        className="inline-flex justify-center rounded-md bg-orange-500 px-4 py-2 text-sm font-medium text-white shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
                         onClick={closeModal}
                       >
                         Close
