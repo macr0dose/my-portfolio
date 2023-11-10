@@ -6,7 +6,10 @@ import Button from "./Button";
 
 export function ContactForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+//  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+const [submissionMessage, setSubmissionMessage] = useState('');
+
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent the default form submit
@@ -33,15 +36,22 @@ export function ContactForm() {
     }
 
 
+    setSubmissionMessage('Your message has been sent successfully!');
 
-    setSuccessMessage('Your message has been sent successfully!');
+        // Close the modal after a few seconds and clear the message
+        setTimeout(() => {
+          setIsModalOpen(false);
+          setSubmissionMessage('');
+        }, 3000); // Adjust time as needed
+      }
+
 
   setShowSuccessMessage(true);
   setTimeout(() => {
     setShowSuccessMessage(false); // Hide the message after some time
     setIsModalOpen(false); // Close the modal as well
   }, 5000); // 5 seconds displayed
-};
+}
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -176,11 +186,11 @@ export function ContactForm() {
       </Transition>
 
 
-      {/* Conditionally render the submission message */}
-      {successMessage && (
+      
+      {submissionMessage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="bg-white p-4 rounded shadow-lg">
-            <p>{successMessage}</p>
+            <p>{submissionMessage}</p>
           </div>
         </div>
       )}
