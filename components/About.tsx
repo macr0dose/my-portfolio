@@ -12,11 +12,11 @@ const About = () => {
         <p className="uppercase regular-18 mb-8"> </p>
         <p className="regular-18 text-gray-30 mb-8 xl:pr-14">
           Embarking on the tech scene at the age of 15 with Fuji Xerox, I delved
-          into the world of document storage solutions, while managing complex server environments. My background is rich
-          in technology and electronics, with a passion for computer science and
-          the realm of cryptocurrency. Beyond the digital world, my downtime is
-          fueled by the thrill of racing and tuning cars, alongside the energy
-          of live music.
+          into the world of document storage solutions, while managing complex
+          server environments. My background is rich in technology and
+          electronics, with a passion for computer science and the realm of
+          cryptocurrency. Beyond the digital world, my downtime is fueled by the
+          thrill of racing and tuning cars, alongside the energy of live music.
         </p>
       </div>
 

@@ -12,7 +12,7 @@ import { MouseEvent } from "react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const smoothScroll = (e: MouseEvent<HTMLButtonElement>, href: string) => {
+  const smoothScroll = (e: MouseEvent<HTMLElement>, href: string) => {
     e.preventDefault();
     const section = document.querySelector(href);
     if (section) {
@@ -24,21 +24,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      id="navbar"
-      className="flex justify-between items-center max-w-full px-4 py-5 relative z-20 padding-container max-container"
-    >
+    <nav id='navbar' className="flex justify-between items-center max-w-full px-4 py-5 relative z-30">
       <Link href="/" onClick={(e) => smoothScroll(e, "#navbar")}>
-        <Image
-          src="/techrocket.png"
-          alt="logo"
-          width={100}
-          height={100}
-          className="cursor-pointer"
-        />
+        <Image src="/techrocket.svg" alt="logo" width={74} height={29} className="cursor-pointer" />
       </Link>
-
-      <ul className="hidden lg:flex h-full gap-12 items-center ">
+      <ul className="hidden lg:flex h-full gap-12 items-center">
         {NAV_LINKS.map((link) => (
           <li
             key={link.key}
@@ -78,7 +68,7 @@ const Navbar = () => {
         leave="transition-opacity ease-linear duration-300"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
-        className="absolute top-full right-0 mt-2 bg-slate-50 text-black rounded-xl lg-hidden"
+        className="absolute top-full right-0 mt-2 bg-slate-50 text-black rounded-xl lg-hidden "
       >
         <ul>
           {NAV_LINKS.map((link) => (
