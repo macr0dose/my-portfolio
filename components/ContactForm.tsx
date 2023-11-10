@@ -34,7 +34,7 @@ export function ContactForm() {
 
 
 
-    setSubmissionMessage('Your message has been sent successfully!');
+    setSuccessMessage('Your message has been sent successfully!');
 
   setShowSuccessMessage(true);
   setTimeout(() => {
@@ -177,10 +177,10 @@ export function ContactForm() {
 
 
       {/* Conditionally render the submission message */}
-      {submissionMessage && (
+      {successMessage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="bg-white p-4 rounded shadow-lg">
-            <p>{submissionMessage}</p>
+            <p>{successMessage}</p>
           </div>
         </div>
       )}
