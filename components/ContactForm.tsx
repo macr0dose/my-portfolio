@@ -109,7 +109,6 @@ export function ContactForm() {
                             <textarea
                               name="message"
                               id="message"
-                              rows="4"
                               required
                               className="block w-full rounded-md border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             />
