@@ -1,16 +1,16 @@
 // components/ContactForm.js
 
 export default function ContactForm2() {
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault(); // Prevent the default form submit
   
-      const form = new FormData(event.target);
+      const form = new FormData(event.currentTarget); 
   
       try {
         const response = await fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(form).toString(),
+         body: new URLSearchParams(form as any).toString(),
         });
   
         // Handle the response from the server
