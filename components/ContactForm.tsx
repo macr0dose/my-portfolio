@@ -15,6 +15,9 @@ export function ContactForm() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent the default form submit
 
+        // Close the form modal first
+        setIsModalOpen(false);
+
     const form = new FormData(event.currentTarget); // Use currentTarget instead of target
 
     try {
