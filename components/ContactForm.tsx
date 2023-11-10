@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { FormEvent, useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
@@ -6,10 +6,9 @@ import Button from "./Button";
 
 export function ContactForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-//  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  //  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-const [submissionMessage, setSubmissionMessage] = useState('');
-
+  const [submissionMessage, setSubmissionMessage] = useState("");
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent the default form submit
@@ -17,52 +16,49 @@ const [submissionMessage, setSubmissionMessage] = useState('');
     const form = new FormData(event.currentTarget); // Use currentTarget instead of target
 
     try {
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(form as any).toString(), // Typecast form to 'any' for URLSearchParams
       });
 
       // Handle the response from the server
       if (response.ok) {
         // Form submission successful, do something like redirect to a thank-you page
-        console.log('Form submitted successfully!');
+        console.log("Form submitted successfully!");
       } else {
         // Handle errors
-        console.error('Form submission failed!');
+        console.error("Form submission failed!");
       }
     } catch (error) {
-      console.error('An error occurred:', error);
+      console.error("An error occurred:", error);
     }
 
+    setSubmissionMessage("Your message has been sent successfully!");
 
-    setSubmissionMessage('Your message has been sent successfully!');
+    // Close the modal after a few seconds and clear the message
+    setTimeout(() => {
+      setIsModalOpen(false);
+      setSubmissionMessage("");
+    }, 3000); // Adjust time as needed
+  };
 
-        // Close the modal after a few seconds and clear the message
-        setTimeout(() => {
-          setIsModalOpen(false);
-          setSubmissionMessage('');
-        }, 3000); // Adjust time as needed
-  
-
-
-//   setShowSuccessMessage(true);
-//   setTimeout(() => {
-//     setShowSuccessMessage(false); // Hide the message after some time
-//     setIsModalOpen(false); // Close the modal as well
-//   }, 5000); // 5 seconds displayed
-// }
+  //   setShowSuccessMessage(true);
+  //   setTimeout(() => {
+  //     setShowSuccessMessage(false); // Hide the message after some time
+  //     setIsModalOpen(false); // Close the modal as well
+  //   }, 5000); // 5 seconds displayed
+  // }
 
   const closeModal = () => {
     setIsModalOpen(false);
 
-    
     //setShowSuccessMessage(false); // Also reset the success message state
   };
 
   const openModal = () => {
     setIsModalOpen(true);
-  }
+  };
 
   return (
     <>
@@ -112,12 +108,20 @@ const [submissionMessage, setSubmissionMessage] = useState('');
                       </p>
                     </div>
 
-
-                    <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-10">
+                    <form
+                      name="contact"
+                      method="POST"
+                      data-netlify="true"
+                      onSubmit={handleSubmit}
+                      className="mx-auto mt-16 max-w-xl sm:mt-10"
+                    >
                       <input type="hidden" name="form-name" value="contact" />
                       <div className="gap-x-8 gap-y-6">
                         <div>
-                          <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">
+                          <label
+                            htmlFor="name"
+                            className="block text-sm font-semibold leading-6 text-gray-900"
+                          >
                             Name
                           </label>
                           <div className="mt-2.5">
@@ -132,7 +136,10 @@ const [submissionMessage, setSubmissionMessage] = useState('');
                           </div>
                         </div>
                         <div>
-                          <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
+                          <label
+                            htmlFor="email"
+                            className="block text-sm font-semibold leading-6 text-gray-900"
+                          >
                             Email
                           </label>
                           <div className="mt-2.5">
@@ -147,11 +154,13 @@ const [submissionMessage, setSubmissionMessage] = useState('');
                           </div>
                         </div>
                         <div>
-                          <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+                          <label
+                            htmlFor="message"
+                            className="block text-sm font-semibold leading-6 text-gray-900"
+                          >
                             Message
                           </label>
                           <div className="mt-2.5">
-                            
                             <textarea
                               name="message"
                               id="message"
@@ -187,8 +196,6 @@ const [submissionMessage, setSubmissionMessage] = useState('');
         </Dialog>
       </Transition>
 
-
-      
       {submissionMessage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="bg-white p-4 rounded shadow-lg">
@@ -196,8 +203,6 @@ const [submissionMessage, setSubmissionMessage] = useState('');
           </div>
         </div>
       )}
-
-
 
       {/* Success message dialog
       {showSuccessMessage && (
