@@ -66,7 +66,6 @@ export function ContactForm() {
                       name="contact"
                       method="POST"
                       data-netlify="true"
-                      onSubmit="submit"
                       action="/thanks" // You can create a thank you page to redirect after form submission.
                       className="mx-auto mt-16 max-w-xl sm:mt-10"
                     >
