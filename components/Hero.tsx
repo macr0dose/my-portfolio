@@ -4,7 +4,7 @@ import Image from "next/image";
 import Button from "./Button";
 import ContactForm from "./ContactForm";
 
-import { MouseEvent } from 'react';
+import { MouseEvent } from "react";
 
 const smoothScroll = (e: MouseEvent<HTMLButtonElement>, href: string) => {
   e.preventDefault();
@@ -28,28 +28,7 @@ const Hero = () => {
         <p className="bold-20 mt-6 text-gray-30 xl:max-w-[520px]">
           Live, Learn & Level Up.
         </p>
-
-        <form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
-
+        
         <div className="my-8 flex-col"></div>
         <div className="flex gap-5">
           <Button

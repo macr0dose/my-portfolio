@@ -6,15 +6,10 @@ import Button from "./Button";
 
 export function ContactForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-
-    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-
-
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent the default form submit
-
 
     const form = new FormData(event.currentTarget); // Use currentTarget instead of target
 
@@ -37,6 +32,8 @@ export function ContactForm() {
       console.error("An error occurred:", error);
     }
 
+    //Confirmation message pop up
+
     // Close the form modal first
     setIsModalOpen(false);
 
@@ -48,12 +45,11 @@ export function ContactForm() {
       setTimeout(() => {
         setShowSuccessMessage(false);
       }, 3000);
-    }, 500); // Adjust delay time as needed
+    }, 500);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-
     setShowSuccessMessage(false); // Also reset the success message state
   };
 
@@ -73,13 +69,12 @@ export function ContactForm() {
         />
       </div>
 
-
       {showSuccessMessage && (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-    <div className="bg-white p-6 rounded-xl shadow-xl regular-24">
-      <p>Message Sent! I will be in touch soon.</p>
-    </div>
-  </div>
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white p-6 rounded-xl shadow-xl regular-24">
+            <p>Message Sent! I will be in touch soon.</p>
+          </div>
+        </div>
       )}
 
       <Transition appear show={isModalOpen} as={Fragment}>
@@ -189,7 +184,7 @@ export function ContactForm() {
                         </button>
                       </div>
                     </form>
-                    {/* <div className="mt-4">
+                    <div className="mt-4">
                       <button
                         type="button"
                         className="inline-flex justify-center rounded-md bg-orange-500 px-4 py-2 text-sm font-medium text-white shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
@@ -197,7 +192,7 @@ export function ContactForm() {
                       >
                         Close
                       </button>
-                    </div> */}
+                    </div>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
@@ -205,14 +200,6 @@ export function ContactForm() {
           </div>
         </Dialog>
       </Transition>
-
-      {/* {submissionMessage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="bg-white p-4 rounded shadow-lg">
-            <p>{submissionMessage}</p>
-          </div>
-        </div>
-      )} */}
     </>
   );
 }
