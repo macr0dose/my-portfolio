@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, Fragment } from "react";
+import React, { FormEvent, useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Button from "./Button";
 
@@ -8,16 +8,16 @@ export function ContactForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent the default form submit
 
-    const form = new FormData(event.target);
+    const form = new FormData(event.currentTarget); // Use currentTarget instead of target
 
     try {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(form).toString(),
+        body: new URLSearchParams(form as any).toString(), // Typecast form to 'any' for URLSearchParams
       });
 
       // Handle the response from the server
@@ -34,8 +34,7 @@ export function ContactForm() {
   };
 
 
-
-
+  
   const closeModal = () => {
     setIsModalOpen(false);
   };
