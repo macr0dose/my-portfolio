@@ -62,7 +62,18 @@ export function ContactForm() {
                         I'll be on the other side waiting to chat!
                       </p>
                     </div>
-                    <form
+                    <form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+                    {/* <form
                       name="contact"
                       method="POST"
                       data-netlify="true"
@@ -106,6 +117,7 @@ export function ContactForm() {
                             Message
                           </label>
                           <div className="mt-2.5">
+                            
                             <textarea
                               name="message"
                               id="message"
@@ -123,7 +135,7 @@ export function ContactForm() {
                           Send Message
                         </button>
                       </div>
-                    </form>
+                    </form> */}
                     <div className="mt-4">
                       <button
                         type="button"

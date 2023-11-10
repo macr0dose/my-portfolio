@@ -6,7 +6,7 @@ import ContactForm from "./ContactForm";
 
 import { MouseEvent } from 'react';
 
-const smoothScroll = (e: MouseEvent<HTMLElement>, href: string) => {
+const smoothScroll = (e: MouseEvent<HTMLButtonElement>, href: string) => {
   e.preventDefault();
   const section = document.querySelector(href);
   if (section) {
@@ -40,17 +40,6 @@ const Hero = () => {
           />
           <ContactForm />
         </div>
-        <form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
       </div>
 
       <div className="">
