@@ -33,6 +33,9 @@ export function ContactForm() {
     }
 
 
+
+    setSubmissionMessage('Your message has been sent successfully!');
+
   setShowSuccessMessage(true);
   setTimeout(() => {
     setShowSuccessMessage(false); // Hide the message after some time
@@ -171,14 +174,27 @@ export function ContactForm() {
           </div>
         </Dialog>
       </Transition>
-      {/* Success message dialog */}
+
+
+      {/* Conditionally render the submission message */}
+      {submissionMessage && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="bg-white p-4 rounded shadow-lg">
+            <p>{submissionMessage}</p>
+          </div>
+        </div>
+      )}
+
+
+
+      {/* Success message dialog
       {showSuccessMessage && (
         <div className="fixed inset-0 z-40 flex items-center justify-center">
           <div className="max-w-md px-4 py-2 text-center bold-32 text-white bg-green-500 rounded-md">
             Your message has been sent successfully!
           </div>
         </div>
-      )}
+     )} */}
     </>
   );
 }
