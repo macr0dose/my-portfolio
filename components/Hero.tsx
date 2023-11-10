@@ -6,7 +6,7 @@ import ContactForm from "./ContactForm";
 
 import { MouseEvent } from 'react';
 
-const smoothScroll = (e: MouseEvent<HTMLButtonElement>, href: string) => {
+const smoothScroll = (e: MouseEvent<HTMLElement>, href: string) => {
   e.preventDefault();
   const section = document.querySelector(href);
   if (section) {
