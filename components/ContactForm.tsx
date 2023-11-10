@@ -64,7 +64,7 @@ export function ContactForm() {
                     </div>
                     {/* Netlify form integration starts here */}
                     <form
-        name="contact" netlify
+        name="contact"
         method="POST"
         data-netlify="true" // This tells Netlify to handle this form
         action="/thank-you" // Redirect to this path after submission
