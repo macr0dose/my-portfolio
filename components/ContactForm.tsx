@@ -178,7 +178,7 @@ export function ContactForm() {
                           Send Message
                         </button>
                       </div>
-                    </form> */}
+                    </form> 
                     {/* <div className="mt-4">
                       <button
                         type="button"
