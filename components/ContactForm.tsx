@@ -73,12 +73,13 @@ export function ContactForm() {
         />
       </div>
 
+
       {showSuccessMessage && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-6 rounded shadow-lg">
-            <p>Thank you for your message! We will be in touch soon.</p>
-          </div>
-        </div>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div className="bg-white p-6 rounded-xl shadow-xl regular-24">
+      <p>Message Sent! I will be in touch soon.</p>
+    </div>
+  </div>
       )}
 
       <Transition appear show={isModalOpen} as={Fragment}>
