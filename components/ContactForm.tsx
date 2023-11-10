@@ -15,8 +15,6 @@ export function ContactForm() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent the default form submit
 
-        // Close the form modal first
-        setIsModalOpen(false);
 
     const form = new FormData(event.currentTarget); // Use currentTarget instead of target
 
@@ -39,13 +37,19 @@ export function ContactForm() {
       console.error("An error occurred:", error);
     }
 
+    // Close the form modal first
+    setIsModalOpen(false);
 
-    setShowSuccessMessage(true);
+    // Then show the success message after a short delay to allow modal close transition
     setTimeout(() => {
-      setShowSuccessMessage(false); // Hide the message after some time
-      setIsModalOpen(false); // Close the modal as well
-    }, 5000); // 5 seconds displayed
-  }
+      setShowSuccessMessage(true);
+
+      // Hide the success message after 3 seconds
+      setTimeout(() => {
+        setShowSuccessMessage(false);
+      }, 3000);
+    }, 500); // Adjust delay time as needed
+  };
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -70,8 +74,8 @@ export function ContactForm() {
       </div>
 
       {showSuccessMessage && (
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded shadow-lg z-50">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white p-6 rounded shadow-lg">
             <p>Thank you for your message! We will be in touch soon.</p>
           </div>
         </div>
