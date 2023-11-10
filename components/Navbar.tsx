@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav id='navbar' className="flex justify-between items-center max-w-full px-4 py-5 relative z-30">
+    <nav id='navbar' className="flex justify-between items-center max-w-full px-4 py-5 relative z-30 padding-container max-container">
       <Link href="/" onClick={(e) => smoothScroll(e, "#navbar")}>
         <Image src="/techrocket.svg" alt="logo" width={74} height={29} className="cursor-pointer" />
       </Link>
