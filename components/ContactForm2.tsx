@@ -4,7 +4,7 @@ export default function ContactForm2() {
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault(); // Prevent the default form submit
   
-      const form = new FormData(event.currentTarget); 
+      const form = new FormData(event.currentTarget);
   
       try {
         const response = await fetch('/', {
