@@ -46,16 +46,18 @@ const [submissionMessage, setSubmissionMessage] = useState('');
   
 
 
-  setShowSuccessMessage(true);
-  setTimeout(() => {
-    setShowSuccessMessage(false); // Hide the message after some time
-    setIsModalOpen(false); // Close the modal as well
-  }, 5000); // 5 seconds displayed
-}
+//   setShowSuccessMessage(true);
+//   setTimeout(() => {
+//     setShowSuccessMessage(false); // Hide the message after some time
+//     setIsModalOpen(false); // Close the modal as well
+//   }, 5000); // 5 seconds displayed
+// }
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setShowSuccessMessage(false); // Also reset the success message state
+
+    
+    //setShowSuccessMessage(false); // Also reset the success message state
   };
 
   const openModal = () => {
