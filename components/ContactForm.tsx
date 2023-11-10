@@ -174,7 +174,7 @@ export function ContactForm() {
       {/* Success message dialog */}
       {showSuccessMessage && (
         <div className="fixed inset-0 z-40 flex items-center justify-center">
-          <div className="max-w-md px-4 py-2 text-center text-white bg-green-500 rounded-md">
+          <div className="max-w-md px-4 py-2 text-center bold-32 text-white bg-green-500 rounded-md">
             Your message has been sent successfully!
           </div>
         </div>
