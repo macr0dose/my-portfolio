@@ -62,12 +62,21 @@ export function ContactForm() {
                         I'll be on the other side waiting to chat!
                       </p>
                     </div>
-                    <form name="contact" netlify>
+                    <form name="contact" method="POST" data-netlify="true">
   <p>
-    <label>Name <input type="text" name="name" /></label>
+    <label>Your Name: <input type="text" name="name" /></label>
   </p>
   <p>
-    <label>Email <input type="email" name="email" /></label>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
   </p>
   <p>
     <button type="submit">Send</button>
@@ -136,7 +145,7 @@ export function ContactForm() {
                         </button>
                       </div>
                     </form> */}
-                    <div className="mt-4">
+                    {/* <div className="mt-4">
                       <button
                         type="button"
                         className="inline-flex justify-center rounded-md bg-orange-500 px-4 py-2 text-sm font-medium text-white shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
@@ -144,7 +153,7 @@ export function ContactForm() {
                       >
                         Close
                       </button>
-                    </div>
+                    </div> */}
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
