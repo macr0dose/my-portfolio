@@ -1,4 +1,4 @@
-// components/ContactForm.js
+import React, { FormEvent } from 'react';
 
 export default function ContactForm2() {
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
