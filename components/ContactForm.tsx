@@ -43,7 +43,7 @@ const [submissionMessage, setSubmissionMessage] = useState('');
           setIsModalOpen(false);
           setSubmissionMessage('');
         }, 3000); // Adjust time as needed
-      }
+  
 
 
   setShowSuccessMessage(true);
