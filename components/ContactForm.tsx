@@ -6,9 +6,11 @@ import Button from "./Button";
 
 export function ContactForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  //  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-  const [submissionMessage, setSubmissionMessage] = useState("");
+
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent the default form submit
@@ -34,26 +36,18 @@ export function ContactForm() {
       console.error("An error occurred:", error);
     }
 
-    setSubmissionMessage("Your message has been sent successfully!");
 
-    // Close the modal after a few seconds and clear the message
+    setShowSuccessMessage(true);
     setTimeout(() => {
-      setIsModalOpen(false);
-      setSubmissionMessage("");
-    }, 3000); // Adjust time as needed
-  };
-
-  //   setShowSuccessMessage(true);
-  //   setTimeout(() => {
-  //     setShowSuccessMessage(false); // Hide the message after some time
-  //     setIsModalOpen(false); // Close the modal as well
-  //   }, 5000); // 5 seconds displayed
-  // }
+      setShowSuccessMessage(false); // Hide the message after some time
+      setIsModalOpen(false); // Close the modal as well
+    }, 5000); // 5 seconds displayed
+  }
 
   const closeModal = () => {
     setIsModalOpen(false);
 
-    //setShowSuccessMessage(false); // Also reset the success message state
+    setShowSuccessMessage(false); // Also reset the success message state
   };
 
   const openModal = () => {
@@ -71,6 +65,14 @@ export function ContactForm() {
           onClick={openModal}
         />
       </div>
+
+      {showSuccessMessage && (
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded shadow-lg z-50">
+            <p>Thank you for your message! We will be in touch soon.</p>
+          </div>
+        </div>
+      )}
 
       <Transition appear show={isModalOpen} as={Fragment}>
         <Dialog as="div" className="relative z-30" onClose={closeModal}>
@@ -196,22 +198,13 @@ export function ContactForm() {
         </Dialog>
       </Transition>
 
-      {submissionMessage && (
+      {/* {submissionMessage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="bg-white p-4 rounded shadow-lg">
             <p>{submissionMessage}</p>
           </div>
         </div>
-      )}
-
-      {/* Success message dialog
-      {showSuccessMessage && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center">
-          <div className="max-w-md px-4 py-2 text-center bold-32 text-white bg-green-500 rounded-md">
-            Your message has been sent successfully!
-          </div>
-        </div>
-     )} */}
+      )} */}
     </>
   );
 }
