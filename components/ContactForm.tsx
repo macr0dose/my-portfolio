@@ -62,7 +62,7 @@ export function ContactForm() {
       <div className="flex justify-center">
         <Button
           type="button"
-          title="Message Me"
+          title="Let's Chat"
           icon="/mail.svg"
           variant="btn_orange"
           onClick={openModal}

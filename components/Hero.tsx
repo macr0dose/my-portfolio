@@ -33,12 +33,14 @@ const Hero = () => {
         <div className="flex gap-5">
           <Button
             type="button"
-            title="View My Work"
+            title="My Work"
             icon="/console.svg"
             variant="btn_orange"
             onClick={(e) => smoothScroll(e, "#projects")}
           />
           <ContactForm />
+
+
         </div>
       </div>
 
