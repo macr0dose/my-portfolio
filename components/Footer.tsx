@@ -30,11 +30,12 @@ const Footer = () => {
                 <ul className="regular-18 ">
                   {section.links.map((link) => (
                     <li key={link.label}>
-                      <Link href={link.value} passHref>
-                        <span className="cursor-pointer hover:bold-18">
-                          {link.label}
-                        </span>
-                      </Link>
+                      <a
+                        href={link.value}
+                        className="cursor-pointer hover:bold-18"
+                      >
+                        {link.label}
+                      </a>
                     </li>
                   ))}
                 </ul>

@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className="flex">
         <Button
           type="button"
-          title="Coming Soon"
+          title="Soon"
           icon="/user.svg"
           variant="btn_dark_green"
         />
