@@ -10,20 +10,20 @@ export const NAV_LINKS = [
 export const SKILLSET = [
   {
     title: "Languages",
-    icon: "/map.svg",
+    icon: "/languages.svg",
     variant: "green",
     description: "HTML5, CSS3, JavaScript, TypeScript, React, NextJS , Vite, C and more",
   },
   {
     title: "Tools",
-    icon: "/calendar.svg",
+    icon: "/tools.svg",
     variant: "green",
     description:
-      "Bootstrap, Github, Grafbase, HeadlessUI, mongoDB, Netlify, NodeJS, Prisma, RapidAPI, Sanity, ShadCN, TailwindCSS, Vercel",
+      "Github, Grafbase, HeadlessUI, mongoDB, Netlify, NodeJS, Prisma, RapidAPI, Sanity, ShadCN, TailwindCSS, Vercel",
   },
   {
     title: "Solutions",
-    icon: "/tech.svg",
+    icon: "/solutions.svg",
     variant: "green",
     description:
       "My skills are constantly expanding, with a desire to thoroughly understand the vast selection of tools we have available while implementing best practices",
