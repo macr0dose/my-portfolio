@@ -92,8 +92,8 @@ export const FOOTER_LINKS = [
         value: "#projects",
       },
       {
-        label: "About Me",
-        value: "#about",
+        label: "Skills",
+        value: "#skillset",
       },
     ],
   },
