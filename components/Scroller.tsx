@@ -2,7 +2,6 @@
 
 import React, { useRef, useEffect } from "react";
 
-
 const Scroller: React.FC = () => {
   const scrollerRef = useRef<HTMLDivElement>(null);
 
@@ -31,11 +30,11 @@ const Scroller: React.FC = () => {
   return (
     <>
       <div ref={scrollerRef}>
-        <div className="scroller" data-speed="fast">
+        <div className="scroller sm:pb-0" data-speed="fast">
           <ul className="tag-list scroller__inner"></ul>
         </div>
 
-        <div className="scroller padding-container max-container" data-direction="right" data-speed="slow">
+        <div className="scroller" data-direction="right" data-speed="slow">
           <div className="scroller__inner">
             <img src="/html.svg" alt="" />
             <img src="/css.svg" alt="" />
@@ -51,9 +50,20 @@ const Scroller: React.FC = () => {
 
       {/* Add your CSS styles here */}
       <style jsx>{`
-        scroller {
-          max-width: 600px;
+        .scroller {
+          max-width: 1440px;
         }
+
+        .scroller__inner img {
+            width: auto; /* Adjust if you are setting width directly on img */
+            height: 100px; /* Default height */
+          }
+  
+          @media (max-width: 600px) {
+            .scroller__inner img {
+              height: 50px; /* Smaller height on mobile devices */
+            }
+          }
 
         .scroller__inner {
           padding-block: 1rem;

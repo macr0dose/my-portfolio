@@ -5,7 +5,6 @@ import Button from "./Button";
 import ContactForm from "./ContactForm";
 
 import { MouseEvent } from "react";
-import Scroller from "./Scroller";
 
 const smoothScroll = (e: MouseEvent<HTMLButtonElement>, href: string) => {
   e.preventDefault();
@@ -18,7 +17,7 @@ const smoothScroll = (e: MouseEvent<HTMLButtonElement>, href: string) => {
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-b from-transparent to-slate-50 max-container padding-container flex flex-col gap-20 py-20 lg:pb-40 lg:py-20 xl:p-40 xl:flex-row rounded-5xl">
+    <section className="bg-gradient-to-b from-transparent to-slate-50 max-container padding-container flex flex-col gap-20 sm:py-0 lg:pb-40 lg:py-20 xl:p-40 xl:flex-row rounded-5xl">
       <div className="relative z-20 flex flex-col xl:w-1/2">
         <h1 className="bold-52 lg:bold-88">built by</h1>
         <h2 className="text-orange-50 bold-52 lg:bold-88">jay b.</h2>
