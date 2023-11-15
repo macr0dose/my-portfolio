@@ -93,7 +93,7 @@ const Scroller: React.FC = () => {
         .scroller[data-animated="true"] .scroller__inner {
           width: max-content;
           flex-wrap: nowrap;
-          animation: scroll var(--_animation-duration, 40s)
+          animation: scroll var(--_animation-duration, 20s)
             var(--_animation-direction, forwards) linear infinite;
         }
 
@@ -106,11 +106,11 @@ const Scroller: React.FC = () => {
         }
 
         .scroller[data-speed="fast"] {
-          --_animation-duration: 20s;
+          --_animation-duration: 10s;
         }
 
         .scroller[data-speed="slow"] {
-          --_animation-duration: 60s;
+          --_animation-duration: 30s;
         }
 
         @keyframes scroll {
