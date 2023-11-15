@@ -13,11 +13,11 @@ const Footer = () => {
             <Link href="#navbar">
               <div className="flex justify-center md:justify-start">
                 <Image
-                  src="/macrodose-logo.svg"
+                  src="/jblogo.svg"
                   alt="logo"
                   width={200}
                   height={200}
-                  className="opacity-80"
+                  className=""
                 />
               </div>
             </Link>
@@ -65,7 +65,7 @@ const Footer = () => {
 
         <div className="border" />
         <p className="regular-14 my-10 w-full text-center text-gray-30">
-          2023 macr0dose | All Rights Reserved
+          2023 builtByJb | All Rights Reserved
         </p>
       </div>
     </footer>

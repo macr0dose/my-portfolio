@@ -45,7 +45,7 @@ const Navbar = () => {
         <Button
           type="button"
           title="Soon"
-          icon="/user.svg"
+          icon="/dark-mode.svg"
           variant="btn_dark_green"
         />
       </div>

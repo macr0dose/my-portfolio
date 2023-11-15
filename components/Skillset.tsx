@@ -6,7 +6,7 @@ const Skillset = () => {
   return (
     <section
       id="skillset"
-      className="flex-col flexCenter overflow-hidden bg-skillset-bg bg-center bg-no-repeat py-24"
+      className="mt-10 flex-col flexCenter overflow-hidden bg-skillset-bg bg-center bg-no-repeat py-24"
     >
       <div className="max-container padding-container relative w-full flex justify-end">
         <div className="flex flex-1">
@@ -26,8 +26,8 @@ const Skillset = () => {
           />
         </div>
 
-        <div className="z-20 flex w-full flex-col lg:w-[60%]">
-          <div className="z-20 w-full flex flex-col items-start lg:w-[60%]">
+        <div className="flex w-full flex-col lg:w-[60%]">
+          <div className="w-full flex flex-col items-start lg:w-[60%]">
             <div className="relative">
               <h2 className="bold-40 lg:bold-64 mt-4">Skill Set</h2>
             </div>

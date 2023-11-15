@@ -26,7 +26,7 @@ export const SKILLSET = [
     icon: "/solutions.svg",
     variant: "green",
     description:
-      "My skills are constantly expanding, with a desire to thoroughly understand the vast selection of tools we have available while implementing best practices",
+      "Experience with full-stack apps. My skills are constantly expanding, with a desire to thoroughly understand the vast selection of tools we have available while implementing best practices",
   },
 ];
 
@@ -41,7 +41,7 @@ export const PROJECTS = [
     description: "",
   },
   {
-    title: "AI Article Summarizer that will save your results",
+    title: "AI Article Summarizer. Saves your results",
     href: "https://ai-summarize-one.netlify.app",
     icon: "/project2.svg",
     backgroundImage: "/project2.png",
@@ -49,7 +49,7 @@ export const PROJECTS = [
     description: "",
   },
   {
-    title: "AI Prompt Sharing using Google login",
+    title: "AI Prompt Sharing with user profiles",
     href: "https://promptshare-one.vercel.app/",
     icon: "/project3.svg",
     variant: "green",
@@ -70,7 +70,7 @@ export const PROJECTS = [
     description: "",
   },
   {
-    title: "A functional Dribble clone with Google login",
+    title: "A functional Dribble clone with user profiles",
     href: "https://nextjs13-flexibble-one.vercel.app/",
     icon: "/project6.svg",
     variant: "orange",
