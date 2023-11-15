@@ -34,7 +34,7 @@ const Scroller: React.FC = () => {
           <ul className="tag-list scroller__inner"></ul>
         </div>
 
-        <div className="scroller" data-direction="right" data-speed="slow">
+        <div className="scroller padding-container max-container" data-direction="right" data-speed="slow">
           <div className="scroller__inner">
             <img src="/html.svg" alt="" />
             <img src="/css.svg" alt="" />
