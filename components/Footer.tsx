@@ -13,7 +13,7 @@ const Footer = () => {
             <Link href="#navbar">
               <div className="flex justify-center md:justify-start">
                 <Image
-                  src="/jblogo.svg"
+                  src="/jblogo.webp"
                   alt="logo"
                   width={200}
                   height={200}

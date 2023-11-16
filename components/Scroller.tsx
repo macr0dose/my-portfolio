@@ -34,11 +34,11 @@ const Scroller: React.FC = () => {
           <ul className="tag-list scroller__inner"></ul>
         </div>
 
-        <div className="scroller padding-container max-container" data-direction="right" data-speed="slow">
+        <div className="scroller padding-container max-container " data-direction="right" data-speed="slow">
           <div className="scroller__inner">
             <img src="/html.svg" alt="" />
             <img src="/css.svg" alt="" />
-            <img src="/javascipt.svg" alt="" />
+            <img src="/javascript.svg" alt="" />
             <img src="/typescript.svg" alt="" />
             <img src="/react.svg" alt="" />
             <img src="/nextjs.svg" alt="" />
@@ -51,7 +51,7 @@ const Scroller: React.FC = () => {
       {/* Add your CSS styles here */}
       <style jsx>{`
         .scroller {
-          max-width: 1440px;
+          max-width: 1024px;
         }
 
         .scroller__inner img {

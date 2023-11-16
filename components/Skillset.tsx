@@ -11,14 +11,14 @@ const Skillset = () => {
       <div className="max-container padding-container relative w-full flex justify-end">
         <div className="flex flex-1">
           <Image
-            src="/skillsetimg.png"
-            alt="logo2"
+            src="/skillsetimg.avif"
+            alt="logo1"
             width={300}
             height={300}
             className="skillset-image1 rounded-5xl"
           />
           <Image
-            src="/skillsetimg2.png"
+            src="/skillsetimg2.avif"
             alt="logo2"
             width={300}
             height={300}
