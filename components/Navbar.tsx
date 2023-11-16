@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav id='navbar' className="flex justify-between items-center max-w-full px-4 py-5 relative z-30 padding-container max-container">
       <Link href="/" onClick={(e) => smoothScroll(e, "#navbar")}>
-        <Image src="/techrocket.avif" alt="logo" width={100} height={100} className="cursor-pointer" />
+        <Image src="/techrocket.webp" alt="logo" width={100} height={100} className="cursor-pointer" />
       </Link>
       <ul className="hidden lg:flex h-full gap-12 items-center">
         {NAV_LINKS.map((link) => (

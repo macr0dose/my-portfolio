@@ -22,7 +22,7 @@ const About = () => {
 
       <div className="w-full px-6">
         <Image
-          src="/feature-bg.avif"
+          src="/feature-bg.webp"
           alt="rocket"
           width={720}
           height={480}

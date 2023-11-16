@@ -11,15 +11,15 @@ const Skillset = () => {
       <div className="max-container padding-container relative w-full flex justify-end">
         <div className="flex flex-1">
           <Image
-            src="/skillsetimg.avif"
-            alt="logo1"
+            src="/skillsetimg.webp"
+            alt="skills1"
             width={300}
             height={300}
             className="skillset-image1 rounded-5xl"
           />
           <Image
-            src="/skillsetimg2.avif"
-            alt="logo2"
+            src="/skillsetimg2.webp"
+            alt="skills2"
             width={300}
             height={300}
             className="skillset-image2 rounded-5xl"
