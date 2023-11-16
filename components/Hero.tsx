@@ -44,7 +44,7 @@ const Hero = () => {
 
       <div>
         <Image
-          src="/rocketbg.avif"
+          src="/rocketbg.webp"
           alt="rocketbg"
           width={1080}
           height={300}
