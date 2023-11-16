@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="padding-container max-container flex flex-col md:flex-row md:items-center bg-gradient-to-t from-transparent to-slate-50 rounded-5xl xl:pt-8"
+      className="padding-container max-container flex flex-col md:flex-row md:items-center xl:pt-8 bg-gradient-to-t from-transparent to-slate-50 rounded-5xl"
     >
       <div className="w-full padding-container max-container pb-10 xl:pl-5 ">
         <h2 className="mt-8 mb-8 bold-40 lg:bold-64">About Me</h2>
