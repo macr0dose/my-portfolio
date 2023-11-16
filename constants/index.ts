@@ -12,14 +12,14 @@ export const SKILLSET = [
     title: "Languages",
     icon: "/languages.svg",
     variant: "green",
-    description: "HTML5, CSS3, JavaScript, TypeScript, React, NextJS , Vite, C and more",
+    description: "HTML, CSS, JavaScript, TypeScript, React, NextJS , Vite, C and more",
   },
   {
     title: "Tools",
     icon: "/tools.svg",
     variant: "green",
     description:
-      "Github, Grafbase, HeadlessUI, mongoDB, Netlify, NodeJS, Prisma, RapidAPI, Sanity, ShadCN, TailwindCSS, Vercel",
+      "Formspree, Github, Grafbase, HeadlessUI, mongoDB, Netlify, NodeJS, Prisma, RapidAPI, Sanity, ShadCN, TailwindCSS, Vercel",
   },
   {
     title: "Solutions",
