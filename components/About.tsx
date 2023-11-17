@@ -10,7 +10,7 @@ const About = () => {
       <div className="w-full padding-container max-container pb-10 xl:pl-5 ">
         <h2 className="mt-8 mb-8 bold-40 lg:bold-64">About Me</h2>
         <p className="uppercase regular-18 mb-8"> </p>
-        <p className="regular-18 text-gray-30 mb-8 xl:pr-14">
+        <p className="bold-18 text-gray-30 mb-8 xl:pr-14">
           Embarking on the tech scene at the age of 15 with Fuji Xerox, I delved
           into the world of document storage solutions, while managing complex
           server environments. My background is rich in technology and

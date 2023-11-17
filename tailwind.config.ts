@@ -30,8 +30,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'skillset-bg': "url('/skillsetbg.png')",
-        'pattern-2': "url('/pattern-bg.png')",
+        'skillset-bg': "url('/skillsetbg.webp')",
       },
       screens: {
         xs: '400px',

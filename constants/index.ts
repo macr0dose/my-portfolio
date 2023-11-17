@@ -44,7 +44,7 @@ export const PROJECTS = [
     title: "AI Article Summarizer. Saves your results",
     href: "https://ai-summarize-one.netlify.app",
     icon: "/project2.svg",
-    backgroundImage: "/project2.png",
+    backgroundImage: "//project2.png",
     variant: "green",
     description: "",
   },
@@ -104,11 +104,13 @@ export const FOOTER_CONTACT_INFO = {
   links: [
     {
       label: "Email",
+      key: "email",
       value: "mailto:macr0dose00@gmail.com",
       icon: "/mail.svg",
     },
     {
       label: "Twitter",
+      key: "twitter",
       value: "http://www.twitter.com/macr0dose00",
       icon: "/twitter.svg",
     },

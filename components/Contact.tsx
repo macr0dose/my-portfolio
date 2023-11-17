@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="text-center ">
         <h2 className="bold-40 lg:bold-64 rounded-5xl">Hire Me</h2>
       </div>
-      <p className="regular-18 text-gray-30 text-center mb-8">
+      <p className="bold-18 text-gray-30 text-center mb-8">
         Get in touch to discuss any project ideas you may have. Drop your
         details in the form below, let's see what we can create together!
       </p>

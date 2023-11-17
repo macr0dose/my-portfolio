@@ -74,7 +74,7 @@ const Navbar = () => {
           {NAV_LINKS.map((link) => (
             <li
               key={link.key}
-              className="py-2 px-4 hover:bg-gray-100 rounded-xl"
+              className="p-2 px-8 hover:bg-gray-100 rounded-xl regular-24"
             >
               <Link
                 href={link.href}
