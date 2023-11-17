@@ -5,8 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Visual Portfolio Of Projects I Have Created",
+  title: "builtByJB",
+  description: "Visual Portfolio",
 };
 
 export default function RootLayout({
