@@ -49,6 +49,7 @@ const Hero = () => {
           width={1080}
           height={300}
           className="rounded-5xl"
+          loading="eager"  // Disables lazy loading
         />
       </div>
     </section>
