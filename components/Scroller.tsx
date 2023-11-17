@@ -36,14 +36,14 @@ const Scroller: React.FC = () => {
 
         <div className="scroller padding-container max-container " data-direction="right" data-speed="slow">
           <div className="scroller__inner">
-            <img src="/html.svg" alt="" />
-            <img src="/css.svg" alt="" />
-            <img src="/javascript.svg" alt="" />
-            <img src="/typescript.svg" alt="" />
-            <img src="/react.svg" alt="" />
-            <img src="/nextjs.svg" alt="" />
-            <img src="/vite.svg" alt="" />
-            <img src="/github.svg" alt="" />
+            <img src="/html.svg" alt="html" width={150} height={150} />
+            <img src="/css.svg" alt="css" width={150} height={150}/>
+            <img src="/javascript.svg" alt="js" width={150} height={150}/>
+            <img src="/typescript.svg" alt="ts" width={150} height={150}/>
+            <img src="/react.svg" alt="react" width={150} height={150}/>
+            <img src="/nextjs.svg" alt="nextjs" width={150} height={150}/>
+            <img src="/vite.svg" alt="vite" width={150} height={150}/>
+            <img src="/github.svg" alt="github" width={150} height={150}/>
           </div>
         </div>
       </div>
