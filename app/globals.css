@@ -257,7 +257,6 @@ body {
     background-color: #ffffff;
     transition: 0.4s;
     border-radius: 50%;
-
   }
 
   input:checked + .slider {
@@ -281,5 +280,37 @@ body {
 
   input:checked + .slider:before {
     transform: translateX(26px);
+  }
+
+  /* Hamburger Menu Animation*/
+  .hamburger .bar1,
+  .hamburger .bar2,
+  .hamburger .bar3 {
+    width: 35px; /* Adjust the width as needed */
+    height: 5px; /* Adjust the height as needed */
+    background-color: #333; /* Default color for light mode */
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .hamburger.dark-mode .bar1,
+  .hamburger.dark-mode .bar2,
+  .hamburger.dark-mode .bar3 {
+    background-color: #fff; /* Color for dark mode */
+  }
+
+  /* Transformations for open state */
+  .hamburger.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .hamburger.open .bar2 {
+    opacity: 0;
+  }
+
+  .hamburger.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
   }
 }

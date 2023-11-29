@@ -48,7 +48,11 @@ const Scroller: React.FC = () => {
             <img src="/nextjs.svg" alt="nextjs" width={150} height={150} />
             <img src="/vite.svg" alt="vite" width={150} height={150} />
             <img
-              src="/tailwindcss.svg" alt="tailwind" width={150} height={150} />
+              src="/tailwindcss.svg"
+              alt="tailwind"
+              width={150}
+              height={150}
+            />
             <img src="/github.svg" alt="github" width={150} height={150} />
           </div>
           <div ref={scrollerRef}>
@@ -57,15 +61,15 @@ const Scroller: React.FC = () => {
               data-direction="left"
               data-speed="slow"
             >
-              <ul className="tag-list scroller__inner regular-18 items-center ">
-                <li className="border-2 px-2">HTML</li>
-                <li className="border-2 px-2">CSS</li>
-                <li className="border-2 px-2">Typescript</li>
-                <li className="border-2 px-2">React</li>
-                <li className="border-2 px-2">NextJS</li>
-                <li className="border-2 px-2">Vite</li>
-                <li className="border-2 px-2">Tailwind</li>
-                <li className="border-2 px-2">Github</li>
+              <ul className="tag-list scroller__inner regular-18 items-center">
+                <li>CSS</li>
+                <li>HTML</li>
+                <li>Typescript</li>
+                <li>React</li>
+                <li>NextJS</li>
+                <li>Vite</li>
+                <li>Tailwind</li>
+                <li>Github</li>
               </ul>
             </div>
           </div>
@@ -173,10 +177,10 @@ const Scroller: React.FC = () => {
         }
 
         .tag-list li {
-          padding: 1rem;
+          padding: 0.50rem;
           background: #f1f5f9;
-          border-radius: 0.5rem;
-          box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
+          border-radius: 0.25rem;
+          box-shadow: 0 2.5px 8px rgba(0, 0, 0, 0.2);
           color: black; // Default text color
         }
 

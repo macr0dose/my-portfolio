@@ -15,7 +15,7 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    setTheme('light');
+    setTheme("light");
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -33,7 +33,6 @@ const Navbar = () => {
 
   const handleClickOutside = (event: Event) => {
     const target = event.target as Node;
-
     if (menuRef.current && !menuRef.current.contains(target)) {
       setIsMenuOpen(false);
     }
@@ -67,47 +66,40 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <DarkModeToggle />
-      <div ref={menuRef}>
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden"
-        >
-          {theme === "dark" ? (
-            <Image
-              src="/menu-dark.webp" // Path to white hamburger icon for dark mode
-              alt="menu"
-              width={32}
-              height={32}
-              className="cursor-pointer"
-            />
-          ) : (
-            <Image
-              src="/menu.webp" // Path to default hamburger icon for light mode
-              alt="menu"
-              width={32}
-              height={32}
-              className="cursor-pointer"
-            />
-          )}
-        </button>
+      <div>
+        <DarkModeToggle />
+      </div>
+
+      <div ref={menuRef} >
+      <button
+  onClick={() => setIsMenuOpen(!isMenuOpen)}
+  className="lg:hidden"
+>
+  <div
+    className={`hamburger ${isMenuOpen ? "open" : ""} ${
+      theme === "dark" ? "dark-mode" : ""
+    }`}
+  >
+    <div className="bar1"></div>
+    <div className="bar2"></div>
+    <div className="bar3"></div>
+  </div>
+</button>
 
         <Transition
           show={isMenuOpen}
-          enter="transition-opacity ease-linear duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity ease-linear duration-300"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-          className="absolute top-full right-0 mt-2 bg-slate-200 rounded-xl lg:hidden shadow-lg"
+          enter="transition ease-in-out duration-300 transform"
+          enterFrom="translate-x-full" // Starts from the right edge
+          enterTo="translate-x-0" // Ends at the current position
+          leave="transition ease-in-out duration-300 transform"
+          leaveFrom="translate-x-0" // Starts from the current position
+          leaveTo="translate-x-full" // Moves to the right edge
+          className="absolute top-full right-0 mt-2 lg:hidden shadow-lg text-center rounded-2xl"
         >
-          <ul>
+          <ul className="shadow-2xl shadow-black border-2 dark:border-orange-50 rounded-2xl bg-slate-200 p-2">
+            {/* <h2 className="bold-24 pt-2">Navigation</h2> */}
             {NAV_LINKS.map((link) => (
-              <li
-                key={link.key}
-                className="p-2 px-8 rounded-xl regular-24 text-black"
-              >
+              <li key={link.key} className="p-2 bold-20 text-black border-orange-50">
                 <Link
                   href={link.href}
                   onClick={(e) => smoothScroll(e, link.href)}
