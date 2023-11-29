@@ -40,7 +40,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="flex gap-20 padding-container justify-center py-10 ">
+          <div className="flex gap-20 padding-container py-10 ">
             {FOOTER_LINKS.map((section) => (
               <div key={section.title} className="text-center ">
                 <h4 className="bold-18 mb-4">{section.title}</h4>
@@ -81,7 +81,7 @@ const Footer = () => {
 
         <div className="border" />
         <p className="regular-14 my-10 w-full text-center text-gray-20">
-          2023 builtByJb | All Rights Reserved
+          2023 builtByJB | All Rights Reserved
         </p>
       </div>
     </footer>

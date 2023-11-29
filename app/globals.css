@@ -202,7 +202,14 @@ body {
   .skillset-image2 {
     @apply absolute top-[60%] z-10 hidden max-w-[1500px] rotate-[-15deg] md:-left-16 lg:flex 3xl:left-20;
   }
- 
+
+  /* Header */
+  @media (max-width: 1024px) {
+    .custom-logo {
+      width: 80px;
+      height: 80px;
+    }
+  }
 
   /*Footer */
   .visually-hidden {

@@ -49,7 +49,7 @@ const Navbar = () => {
           alt="logo"
           width={125}
           height={125}
-          className="cursor-pointer"
+          className="cursor-pointer custom-logo"
         />
       </Link>
 
