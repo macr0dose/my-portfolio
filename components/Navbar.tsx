@@ -11,7 +11,7 @@ import { useTheme } from 'next-themes';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
+  const menuRef = useRef<HTMLDivElement>(null);
   const { theme } = useTheme();
 
   const smoothScroll = (e: MouseEvent<HTMLElement>, href: string) => {
