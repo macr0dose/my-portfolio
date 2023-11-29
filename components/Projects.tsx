@@ -7,7 +7,7 @@ const Projects = () => {
       <div className="flex-1 container mx-auto p-4">
         <h1 className="bold-40 lg:bold-64">My Projects</h1>
         <div className="grid grid-cols-1 mt-8 mb-8 rounded-xl">
-          <div className="mt-10 hover-container bg-gradient-to-t from-transparent to-slate-50 rounded-2xl">
+          <div className="mt-10 hover-container bg-gradient-to-t from-transparent to-slate-50 dark:to-slate-800 rounded-2xl">
             <ul className="projects-grid p-8">
               {PROJECTS.map((project) => (
                 <li key={project.title} className="projects-hover items-center">

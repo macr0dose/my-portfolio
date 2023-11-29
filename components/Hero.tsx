@@ -17,15 +17,15 @@ const smoothScroll = (e: MouseEvent<HTMLButtonElement>, href: string) => {
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-b from-transparent to-slate-50 max-container padding-container flex flex-col gap-20 py-10 lg:pb-40 lg:py-20 xl:p-40 xl:flex-row rounded-5xl shadow-2xl">
+    <section className="bg-gradient-to-b from-transparent to-slate-100 dark:to-slate-800 max-container padding-container flex flex-col gap-20 py-10 lg:pb-40 lg:py-20 xl:p-40 xl:flex-row rounded-5xl shadow-lg">
       <div className="relative z-20 flex flex-col xl:w-1/2">
         <h1 className="bold-52 lg:bold-88">built by</h1>
         <h2 className="text-orange-50 bold-52 lg:bold-88">j b.</h2>
-        <p className="bold-20 mt-6 text-gray-30 xl:max-w-[520px]">
+        <p className="bold-20 mt-6 text-gray-20 xl:max-w-[520px] dark:text-gray-400">
           Creating functional projects with passion. Come and discover for
           yourself.
         </p>
-        <p className="bold-20 mt-6 text-gray-30 xl:max-w-[520px]">
+        <p className="bold-20 mt-6 text-black xl:max-w-[520px] dark:text-white">
           Available for Hire
         </p>
 

@@ -30,20 +30,44 @@ const Scroller: React.FC = () => {
   return (
     <>
       <div ref={scrollerRef}>
-        <div className="scroller sm:pb-0" data-speed="fast">
-          <ul className="tag-list scroller__inner"></ul>
+        <div className="scroller sm:pb-0 " data-speed="fast">
+          <ul className="tag-list scroller__inner "></ul>
         </div>
 
-        <div className="scroller padding-container max-container " data-direction="right" data-speed="slow">
-          <div className="scroller__inner">
+        <div
+          className="scroller padding-container max-container"
+          data-direction="right"
+          data-speed="slow"
+        >
+          <div className="scroller__inner ">
             <img src="/html.svg" alt="html" width={150} height={150} />
-            <img src="/css.svg" alt="css" width={150} height={150}/>
-            <img src="/javascript.svg" alt="js" width={150} height={150}/>
-            <img src="/typescript.svg" alt="ts" width={150} height={150}/>
-            <img src="/react.svg" alt="react" width={150} height={150}/>
-            <img src="/nextjs.svg" alt="nextjs" width={150} height={150}/>
-            <img src="/vite.svg" alt="vite" width={150} height={150}/>
-            <img src="/github.svg" alt="github" width={150} height={150}/>
+            <img src="/css.svg" alt="css" width={150} height={150} />
+            <img src="/javascript.svg" alt="js" width={150} height={150} />
+            <img src="/typescript.svg" alt="ts" width={150} height={150} />
+            <img src="/react.svg" alt="react" width={150} height={150} />
+            <img src="/nextjs.svg" alt="nextjs" width={150} height={150} />
+            <img src="/vite.svg" alt="vite" width={150} height={150} />
+            <img
+              src="/tailwindcss.svg" alt="tailwind" width={150} height={150} />
+            <img src="/github.svg" alt="github" width={150} height={150} />
+          </div>
+          <div ref={scrollerRef}>
+            <div
+              className="scroller padding-container max-container"
+              data-direction="left"
+              data-speed="slow"
+            >
+              <ul className="tag-list scroller__inner regular-18 items-center ">
+                <li className="border-2 px-2">HTML</li>
+                <li className="border-2 px-2">CSS</li>
+                <li className="border-2 px-2">Typescript</li>
+                <li className="border-2 px-2">React</li>
+                <li className="border-2 px-2">NextJS</li>
+                <li className="border-2 px-2">Vite</li>
+                <li className="border-2 px-2">Tailwind</li>
+                <li className="border-2 px-2">Github</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -55,15 +79,15 @@ const Scroller: React.FC = () => {
         }
 
         .scroller__inner img {
-            width: auto; /* Adjust if you are setting width directly on img */
-            height: 100px; /* Default height */
+          width: auto; /* Adjust if you are setting width directly on img */
+          height: 100px; /* Default height */
+        }
+
+        @media (max-width: 600px) {
+          .scroller__inner img {
+            height: 50px; /* Smaller height on mobile devices */
           }
-  
-          @media (max-width: 600px) {
-            .scroller__inner img {
-              height: 50px; /* Smaller height on mobile devices */
-            }
-          }
+        }
 
         .scroller__inner {
           padding-block: 1rem;
@@ -137,7 +161,7 @@ const Scroller: React.FC = () => {
           display: grid;
           min-block-size: 100vh;
           place-content: center;
-          font-family: system-ui;
+          font-family: inter;
           font-size: 1.125rem;
           background-color: var(--clr-primary-800);
         }
@@ -150,9 +174,10 @@ const Scroller: React.FC = () => {
 
         .tag-list li {
           padding: 1rem;
-          background: var(--clr-primary-400);
+          background: #f1f5f9;
           border-radius: 0.5rem;
-          box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+          box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
+          color: black; // Default text color
         }
 
         /* for testing purposed to ensure the animation lined up correctly */

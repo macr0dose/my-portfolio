@@ -72,7 +72,7 @@ export function ContactForm() {
                         >
                           Contact Me
                         </Dialog.Title>
-                        <p className="mt-2 regular-18 leading-8 text-gray-30">
+                        <p className="mt-2 regular-18 leading-8 text-gray-20">
                           I'll be on the other side waiting to chat!
                         </p>
                         <div className="mt-2">

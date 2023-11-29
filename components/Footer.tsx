@@ -1,9 +1,27 @@
+"use client"
+
 import { FOOTER_CONTACT_INFO, FOOTER_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useTheme } from 'next-themes';
 
 const Footer = () => {
+  const { theme } = useTheme();
+
+  const getIconPath = (icon) => {
+    if (theme === 'dark') {
+      // Check for specific icons and replace them for dark mode
+      if (icon.includes('mail.svg')) {
+        return icon.replace('mail.svg', 'mail-dark.svg');
+      }
+      if (icon.includes('twitter.svg')) {
+        return icon.replace('twitter.svg', 'twitter-dark.svg');
+      }
+    }
+    return icon; // Default icon for light mode
+  };
+
   return (
     <footer className="flexCenter">
       <div className="padding-container max-container w-full flex flex-col mt-8">
@@ -11,15 +29,14 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row gap-[10%]">
           <div className="flex justify-center md:justify-start w-full">
             <Link href="#navbar">
-              <div className="flex justify-center md:justify-start">
                 <Image
                   src="/jblogo.webp"
                   alt="logo"
-                  width={200}
-                  height={200}
-                  className=""
+                  width={150}
+                  height={150}
+                  className="py-8"
                 />
-              </div>
+
             </Link>
           </div>
 
@@ -42,20 +59,19 @@ const Footer = () => {
               </div>
             ))}
 
-            <div className="flex padding-container">
-              <FooterColumn title={FOOTER_CONTACT_INFO.title}>
-                <div className="flex gap-6 lg:flex-row">
-                  {FOOTER_CONTACT_INFO.links.map((link) => (
-                    // The key should be unique for each link, consider using a combination or different identifier
-                    <Link href={link.value} key={link.value}>
-                      <Image
-                        src={link.icon}
-                        alt={`${link.label} icon`}
-                        width={40}
-                        height={40}
-                        className="hover:scale-110"
-                      />
-                    </Link>
+<div className="flex padding-container">
+        <FooterColumn title={FOOTER_CONTACT_INFO.title}>
+          <div className="flex gap-6 lg:flex-row">
+            {FOOTER_CONTACT_INFO.links.map((link) => (
+              <Link href={link.value} key={link.value}>
+                <Image
+                  src={getIconPath(link.icon)} // Use getIconPath function
+                  alt={`${link.label} icon`}
+                  width={40}
+                  height={40}
+                  className="hover:scale-110"
+                />
+              </Link>
                   ))}
                 </div>
               </FooterColumn>
@@ -64,7 +80,7 @@ const Footer = () => {
         </div>
 
         <div className="border" />
-        <p className="regular-14 my-10 w-full text-center text-gray-30">
+        <p className="regular-14 my-10 w-full text-center text-gray-20">
           2023 builtByJb | All Rights Reserved
         </p>
       </div>

@@ -12,7 +12,8 @@ export const SKILLSET = [
     title: "Languages",
     icon: "/languages.svg",
     variant: "green",
-    description: "HTML, CSS, JavaScript, TypeScript, React, NextJS , Vite, C and more",
+    description:
+      "HTML, CSS, JavaScript, TypeScript, React, NextJS , Vite, C and more",
   },
   {
     title: "Tools",
@@ -107,17 +108,19 @@ export const FOOTER_CONTACT_INFO = {
       key: "email",
       value: "mailto:macr0dose00@gmail.com",
       icon: "/mail.svg",
+      darkIcon: "/mail-dark.svg",
     },
     {
       label: "Twitter",
       key: "twitter",
       value: "http://www.twitter.com/macr0dose00",
       icon: "/twitter.svg",
+      darkIcon: "/twitter-dark.svg",
     },
   ],
 };
 
-export const SOCIALS = {
-  title: "Social",
-  links: ["/twitter.svg", "/mail.svg", "/instagram.svg"],
-};
+// export const SOCIALS = {
+//   title: "Social",
+//   links: ["/twitter.svg", "/mail.svg"],
+// };

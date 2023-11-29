@@ -108,7 +108,7 @@ export function ContactFormOLD() {
                       <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                         Contact Me
                       </h2>
-                      <p className="mt-2 regular-18 leading-8 text-gray-30">
+                      <p className="mt-2 regular-18 leading-8 text-gray-20">
                         I'll be on the other side waiting to chat!
                       </p>
                     </div>

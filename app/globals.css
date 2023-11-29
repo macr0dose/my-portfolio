@@ -16,7 +16,7 @@ body {
 
 @layer utilities {
   .btn_white {
-    @apply border-white bg-white px-8 py-3 text-green-50;
+    @apply border-white bg-white px-8 py-3 text-green-50 hover:border-orange-50;
   }
   .btn_white_text {
     @apply border-white bg-white px-8 py-3 text-gray-90;
@@ -25,7 +25,7 @@ body {
     @apply border-orange-500 bg-orange-50 px-8 py-5 text-white;
   }
   .btn_dark_green {
-    @apply bg-green-90 hover:border-2 hover:border-orange-50 hover:rounded-5xl px-8 py-4 text-white transition-all;
+    @apply bg-green-90 border-2 hover:border-orange-50 rounded-5xl px-8 py-4 text-white transition-all;
   }
   .btn_dark_green_outline {
     @apply border-gray-20 bg-green-90 px-8 py-5 text-white;
@@ -202,6 +202,7 @@ body {
   .skillset-image2 {
     @apply absolute top-[60%] z-10 hidden max-w-[1500px] rotate-[-15deg] md:-left-16 lg:flex 3xl:left-20;
   }
+ 
 
   /*Footer */
   .visually-hidden {
@@ -211,5 +212,67 @@ body {
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap; /* added line to stop content from "spilling" over */
+  }
+
+  /*Dark/Light Mode Toggle */
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #353535;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ffffff;
+    transition: 0.4s;
+    border-radius: 50%;
+
+  }
+
+  input:checked + .slider {
+    background-color: #ff814c;
+  }
+
+  .slider .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+  }
+
+  .slider .sun {
+    left: 5px;
+  }
+
+  .slider .moon {
+    right: 5px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
   }
 }
