@@ -9,7 +9,7 @@ import { useTheme } from 'next-themes';
 const Footer = () => {
   const { theme } = useTheme();
 
-  const getIconPath = (icon) => {
+  const getIconPath = (icon: string) => {
     if (theme === 'dark') {
       // Check for specific icons and replace them for dark mode
       if (icon.includes('mail.svg')) {
