@@ -12,7 +12,15 @@ import { useTheme } from "next-themes";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setTheme('light');
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setTheme]);
 
   const smoothScroll = (e: MouseEvent<HTMLElement>, href: string) => {
     e.preventDefault();
@@ -30,13 +38,6 @@ const Navbar = () => {
       setIsMenuOpen(false);
     }
   };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
     <nav
