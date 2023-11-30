@@ -57,7 +57,7 @@ const Navbar = () => {
         {NAV_LINKS.map((link) => (
           <li
             key={link.key}
-            className="text-gray-50 cursor-pointer pb-1.5 transition-all regular-24 hover:bold-24 dark:text-white"
+            className="cursor-pointer pb-1.5 transition-all regular-24 dark:text-white hover:shadow-effect"
           >
             <Link href={link.href} onClick={(e) => smoothScroll(e, link.href)}>
               {link.label}
@@ -67,7 +67,7 @@ const Navbar = () => {
       </ul>
 
       <div>
-        <DarkModeToggle />
+        <DarkModeToggle/>
       </div>
 
       <div ref={menuRef}>
