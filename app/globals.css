@@ -13,7 +13,7 @@
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter-Regular.woff2") format("woff2"),
-    url("/fonts/Inter-Bold.woff2") format("woff2");
+    url("/fonts/Inter-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -21,7 +21,7 @@
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter-Bold.woff2") format("woff2"),
-    url("/fonts/Inter-Bold.woff2") format("woff2");
+    url("/fonts/Inter-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -29,7 +29,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  font-weight: 400; /* Using the regular weight specified in the @font-face rule */
+  font-weight: 400;
 }
 
 @layer utilities {
