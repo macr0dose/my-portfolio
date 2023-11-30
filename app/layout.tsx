@@ -27,7 +27,6 @@ export default function RootLayout({
         <Navbar />
         <main className="relative overflow-hidden">{children}</main>
         <Footer />
-
           </ThemeProvider>
       </body>
     </html>
