@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
+import "../app/scrollerStyles.css";
 
 const Scroller: React.FC = () => {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -47,12 +48,7 @@ const Scroller: React.FC = () => {
             <img src="/react.svg" alt="react" width={150} height={150} />
             <img src="/nextjs.svg" alt="nextjs" width={150} height={150} />
             <img src="/vite.svg" alt="vite" width={150} height={150} />
-            <img
-              src="/tailwindcss.svg"
-              alt="tailwind"
-              width={150}
-              height={150}
-            />
+            <img src="/tailwindcss.svg" alt="twind" width={150} height={150} />
             <img src="/github.svg" alt="github" width={150} height={150} />
           </div>
           <div ref={scrollerRef}>
@@ -75,120 +71,6 @@ const Scroller: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Add your CSS styles here */}
-      <style jsx>{`
-        .scroller {
-          max-width: 1024px;
-        }
-
-        .scroller__inner img {
-          width: auto; /* Adjust if you are setting width directly on img */
-          height: 100px; /* Default height */
-        }
-
-        @media (max-width: 600px) {
-          .scroller__inner img {
-            height: 50px; /* Smaller height on mobile devices */
-          }
-        }
-
-        .scroller__inner {
-          padding-block: 1rem;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 1rem;
-        }
-
-        .scroller[data-animated="true"] {
-          overflow: hidden;
-          -webkit-mask: linear-gradient(
-            90deg,
-            transparent,
-            white 20%,
-            white 80%,
-            transparent
-          );
-          mask: linear-gradient(
-            90deg,
-            transparent,
-            white 20%,
-            white 80%,
-            transparent
-          );
-        }
-
-        .scroller[data-animated="true"] .scroller__inner {
-          width: max-content;
-          flex-wrap: nowrap;
-          animation: scroll var(--_animation-duration, 20s)
-            var(--_animation-direction, forwards) linear infinite;
-        }
-
-        .scroller[data-direction="right"] {
-          --_animation-direction: reverse;
-        }
-
-        .scroller[data-direction="left"] {
-          --_animation-direction: forwards;
-        }
-
-        .scroller[data-speed="fast"] {
-          --_animation-duration: 10s;
-        }
-
-        .scroller[data-speed="slow"] {
-          --_animation-duration: 30s;
-        }
-
-        @keyframes scroll {
-          to {
-            transform: translate(calc(-50% - 0.5rem));
-          }
-        }
-
-        /* general styles */
-
-        :root {
-          --clr-neutral-100: hsl(0, 0%, 100%);
-          --clr-primary-100: hsl(205, 15%, 58%);
-          --clr-primary-400: hsl(215, 25%, 27%);
-          --clr-primary-800: hsl(217, 33%, 17%);
-          --clr-primary-900: hsl(218, 33%, 9%);
-        }
-
-        html {
-          color-scheme: dark;
-        }
-
-        body {
-          display: grid;
-          min-block-size: 100vh;
-          place-content: center;
-          font-family: inter;
-          font-size: 1.125rem;
-          background-color: var(--clr-primary-800);
-        }
-
-        .tag-list {
-          margin: 0;
-          padding-inline: 0;
-          list-style: none;
-        }
-
-        .tag-list li {
-          padding: 0.5rem;
-          background: #f1f5f9;
-          border-radius: 0.25rem;
-          box-shadow: 0 2.5px 8px rgba(0, 0, 0, 0.2);
-          color: black; // Default text color
-        }
-
-        /* for testing purposed to ensure the animation lined up correctly */
-        .test {
-          background: red !important;
-        }
-      `}</style>
     </>
   );
 };
