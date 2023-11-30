@@ -57,7 +57,7 @@ const Navbar = () => {
         {NAV_LINKS.map((link) => (
           <li
             key={link.key}
-            className="cursor-pointer pb-1.5 transition-all regular-24 dark:text-white hover:shadow-effect"
+            className="cursor-pointer pb-1.5 transition-all regular-24 dark:text-white hover:text-orange-50 hover:dark:text-orange-50 border-t-2 hover:border-none border-transparent"
           >
             <Link href={link.href} onClick={(e) => smoothScroll(e, link.href)}>
               {link.label}
@@ -80,6 +80,8 @@ const Navbar = () => {
             className={`hamburger ${isMenuOpen ? "open" : ""} ${
               theme === "dark" ? "dark-mode" : ""
             }`}
+
+            aria-label="Menu"
           >
             <div className="bar1"></div>
             <div className="bar2"></div>
