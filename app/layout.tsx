@@ -19,17 +19,16 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem
-            disableTransitionOnChange
-          >
-        <Navbar />
-        <main className="relative overflow-hidden">{children}</main>
-        <Footer />
-          </ThemeProvider>
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <main className="relative overflow-hidden">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
-    
   );
 }

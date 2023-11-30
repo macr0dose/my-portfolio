@@ -70,21 +70,23 @@ const Navbar = () => {
         <DarkModeToggle />
       </div>
 
-      <div ref={menuRef} >
-      <button
-  onClick={() => setIsMenuOpen(!isMenuOpen)}
-  className="lg:hidden"
->
-  <div
-    className={`hamburger ${isMenuOpen ? "open" : ""} ${
-      theme === "dark" ? "dark-mode" : ""
-    }`}
-  >
-    <div className="bar1"></div>
-    <div className="bar2"></div>
-    <div className="bar3"></div>
-  </div>
-</button>
+      <div ref={menuRef}>
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="lg:hidden"
+          aria-label="Menu"
+        >
+          <div
+            className={`hamburger ${isMenuOpen ? "open" : ""} ${
+              theme === "dark" ? "dark-mode" : ""
+            }`}
+          >
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </div>
+          <span className="visually-hidden">Toggle Menu</span>
+        </button>
 
         <Transition
           show={isMenuOpen}
@@ -99,7 +101,10 @@ const Navbar = () => {
           <ul className="shadow-2xl shadow-black border-2 dark:border-orange-50 rounded-2xl bg-slate-200 p-2">
             {/* <h2 className="bold-24 pt-2">Navigation</h2> */}
             {NAV_LINKS.map((link) => (
-              <li key={link.key} className="p-2 bold-20 text-black border-orange-50">
+              <li
+                key={link.key}
+                className="p-2 bold-20 text-black border-orange-50"
+              >
                 <Link
                   href={link.href}
                   onClick={(e) => smoothScroll(e, link.href)}

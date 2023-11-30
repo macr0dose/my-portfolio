@@ -177,7 +177,7 @@ const Scroller: React.FC = () => {
         }
 
         .tag-list li {
-          padding: 0.50rem;
+          padding: 0.5rem;
           background: #f1f5f9;
           border-radius: 0.25rem;
           box-shadow: 0 2.5px 8px rgba(0, 0, 0, 0.2);
