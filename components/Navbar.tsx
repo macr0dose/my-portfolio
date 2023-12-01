@@ -80,8 +80,6 @@ const Navbar = () => {
             className={`hamburger ${isMenuOpen ? "open" : ""} ${
               theme === "dark" ? "dark-mode" : ""
             }`}
-
-            aria-label="Menu"
           >
             <div className="bar1"></div>
             <div className="bar2"></div>
