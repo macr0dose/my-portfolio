@@ -1,6 +1,5 @@
 import { PROJECTS } from "@/constants";
 import Image from "next/image";
-
 const Projects = () => {
   return (
     <div id="projects" className="flex flex-col padding-container max-container">
@@ -15,10 +14,9 @@ const Projects = () => {
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="block text-center"
                   >
-                    <h2 className="projects-title hover-text text-center">
-                      {project.title}
-                    </h2>
+                    <h2 className="projects-title hover-text">{project.title}</h2>
                     <Image
                       src={project.icon}
                       alt={`${project.title} icon`}
@@ -37,22 +35,22 @@ const Projects = () => {
   );
 };
 
-type ProjectsItem = {
-  title: string;
-  icon: string;
-  description: string;
-  backgroundImage: string;
-};
+// type ProjectsItem = {
+//   title: string;
+//   icon: string;
+//   description: string;
+//   backgroundImage: string;
+// };
 
-const ProjectsItem = ({ title, icon, }: ProjectsItem) => {
-  return (
-    <li className="flex w-full flex-1 flex-col items-start">
-      <div className="rounded-full p-4 lg:p-7">
-        <Image src={icon} alt={title} width={28} height={28} />
-      </div>
-      <h2 className="bold-20 lg:bold-32 mt-5 capitalize">{title}</h2>
-    </li>
-  );
-};
+// const ProjectsItem = ({ title, icon, }: ProjectsItem) => {
+//   return (
+//     <li className="flex w-full flex-1 flex-col items-start">
+//       <div className="rounded-full p-4 lg:p-7">
+//         <Image src={icon} alt={title} width={28} height={28} />
+//       </div>
+//       <h2 className="bold-20 lg:bold-32 mt-5 capitalize">{title}</h2>
+//     </li>
+//   );
+// };
 
 export default Projects;

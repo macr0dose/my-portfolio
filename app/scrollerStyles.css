@@ -10,6 +10,7 @@
   @media (max-width: 600px) {
     .scroller__inner img {
       height: 50px;
+      width: 50px;
     }
   }
   

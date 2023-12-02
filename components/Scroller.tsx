@@ -31,7 +31,7 @@ const Scroller: React.FC = () => {
   return (
     <>
       <div ref={scrollerRef}>
-        <div className="scroller sm:pb-0 " data-speed="fast">
+        <div className="scroller sm:pb-0" data-speed="fast">
           <ul className="tag-list scroller__inner "></ul>
         </div>
 
