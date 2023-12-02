@@ -257,7 +257,7 @@ body {
     right: 0;
     bottom: 0;
     background-color: #353535;
-    transition: 0.4s;
+    transition: 0.1s;
     border-radius: 34px;
   }
 
@@ -330,8 +330,36 @@ body {
 
 
   /* Navbar Text Hover */
-  .hover\:border-t:hover {
-    border-bottom: 2px solid #BorderColor;
+  .hover-border-out {
+    position: relative;
+    overflow: hidden;
   }
-
+  
+  .hover-border-out::before, 
+  .hover-border-out::after {
+    content: '';
+    position: absolute;
+    top: -2px; /* Adjust as needed for the thicker border */
+    width: 50%;
+    height: 4px; /* Increased thickness */
+    background-color: transparent;
+    transition: transform 0.25s ease-out; /* Increased duration */
+    transform: scaleX(0);
+  }
+  
+  .hover-border-out::before {
+    left: 50%;
+    transform-origin: left;
+  }
+  
+  .hover-border-out::after {
+    right: 50%;
+    transform-origin: right;
+  }
+  
+  .hover-border-out:hover::before,
+  .hover-border-out:hover::after {
+    background-color: #FF814C; /* Default hover border color */
+    transform: scaleX(1);
+  }
 }

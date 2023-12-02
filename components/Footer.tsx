@@ -27,7 +27,7 @@ const Footer = () => {
       <div className="padding-container max-container w-full flex flex-col mt-8">
         <div className="border"></div>
         <div className="flex flex-col md:flex-row gap-[10%]">
-          <div className="flex justify-center md:justify-start w-full">
+          <div className="flex flexCenter md:justify-start w-full">
             <Link href="#navbar">
               <Image
                 src="/jblogo.webp"

@@ -1,9 +1,9 @@
 // NAVIGATION
 export const NAV_LINKS = [
   { href: "#navbar", key: "home", label: "Home" },
-  { href: "#projects", key: "my_projects", label: "My Projects" },
-  { href: "#about", key: "about", label: "About Me" },
-  { href: "#contact", key: "contact_me", label: "Contact Me" },
+  { href: "#projects", key: "projects", label: "Projects" },
+  { href: "#about", key: "about", label: "About" },
+  { href: "#contact", key: "contact", label: "Contact" },
 ];
 
 // SKILLSET SECTION
