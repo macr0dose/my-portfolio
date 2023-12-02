@@ -33,20 +33,8 @@ body {
 }
 
 @layer utilities {
-  .btn_white {
-    @apply border-white bg-white px-8 py-3 text-green-50 hover:border-orange-50;
-  }
-  .btn_white_text {
-    @apply border-white bg-white px-8 py-3 text-gray-90;
-  }
   .btn_orange {
     @apply border-orange-500 bg-orange-50 px-8 py-5 text-white;
-  }
-  .btn_dark_green {
-    @apply bg-green-90 border-2 hover:border-orange-50 rounded-5xl px-8 py-4 text-white transition-all;
-  }
-  .btn_dark_green_outline {
-    @apply border-gray-20 bg-green-90 px-8 py-5 text-white;
   }
 
   .max-container {

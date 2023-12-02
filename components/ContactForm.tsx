@@ -148,7 +148,7 @@ export function ContactForm() {
                               <button
                                 type="submit"
                                 disabled={state.submitting}
-                                className="inline-flex justify-center rounded-5xl border-2 border-orange-50 bg-orange-500 px-4 py-2 text-sm font-medium text-white shadow-md  hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
+                                className="inline-flex justify-center rounded-5xl border-2 border-orange-50 bg-orange-50 hover:bg-white px-4 py-2 text-sm regular-14 text-white hover:text-orange-50 shadow-md focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-opacity-50"
                               >
                                 Send Message
                               </button>
@@ -157,7 +157,7 @@ export function ContactForm() {
                           <div className="mt-10">
                             <button
                               type="button"
-                              className="inline-flex justify-center rounded-5xl bg-white px-4 py-2 text-sm font-medium text-orange-50 border-2 border-orange-50 shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
+                              className="inline-flex justify-center rounded-5xl px-4 py-2 regular-14 text-orange-50 hover:underline focus:outline-none focus:ring-2 focus:ring-orange-50 focus:ring-opacity-50"
                               onClick={closeModal}
                             >
                               Close

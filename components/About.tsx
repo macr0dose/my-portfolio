@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="padding-container max-container flex flex-col md:flex-row md:items-center xl:pt-8 bg-gradient-to-t from-transparent to-slate-100 dark:to-slate-800 rounded-5xl"
+      className="padding-container max-container flex flex-col md:flex-row md:items-center xl:pt-8 bg-gradient-to-t from-transparent to-slate-100 dark:to-slate-800 rounded-3xl"
     >
       <div className="w-full padding-container max-container pb-10 xl:pl-5 ">
         <h2 className="mt-8 mb-8 bold-40 lg:bold-64">About Me</h2>
@@ -26,7 +26,7 @@ const About = () => {
           alt="rocket"
           width={720}
           height={480}
-          className="rounded-5xl mb-10"
+          className="rounded-3xl mb-10"
         />
       </div>
     </section>
