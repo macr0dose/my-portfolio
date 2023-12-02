@@ -1,6 +1,14 @@
+"use client";
+
 import { PROJECTS } from "@/constants";
 import Image from "next/image";
+
 const Projects = () => {
+
+  const handleProjectClick = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div id="projects" className="flex flex-col padding-container max-container">
       <div className="flex-1 container mx-auto p-4">
@@ -9,22 +17,18 @@ const Projects = () => {
           <div className="mt-10 hover-container bg-gradient-to-t from-transparent to-slate-50 dark:to-slate-800 rounded-2xl">
             <ul className="projects-grid p-8">
               {PROJECTS.map((project) => (
-                <li key={project.title} className="projects-hover items-center">
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-center"
-                  >
-                    <h2 className="projects-title hover-text">{project.title}</h2>
-                    <Image
-                      src={project.icon}
-                      alt={`${project.title} icon`}
-                      width={414}
-                      height={314}
-                    />
-                    <p>{project.description}</p>
-                  </a>
+                <li key={project.title}
+                    className="projects-hover items-center text-center cursor-pointer"
+                    onClick={() => handleProjectClick(project.href)}>
+                  <h2 className="projects-title hover-text">{project.title}</h2>
+                  <Image
+                    src={project.icon}
+                    alt={`${project.title} icon`}
+                    width={414}
+                    height={314}
+                    layout="responsive"
+                  />
+                  <p>{project.description}</p>
                 </li>
               ))}
             </ul>
