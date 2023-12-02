@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const Projects = () => {
 
-  const handleProjectClick = (url) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
+  const handleProjectClick = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
