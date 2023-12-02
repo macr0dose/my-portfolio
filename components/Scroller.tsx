@@ -40,7 +40,7 @@ const Scroller: React.FC = () => {
           data-direction="right"
           data-speed="slow"
         >
-          <div className="scroller__inner ">
+          <div className="scroller__inner">
             <img src="/html.svg" alt="html" width={150} height={150} />
             <img src="/css.svg" alt="css" width={150} height={150} />
             <img src="/javascript.svg" alt="js" width={150} height={150} />
@@ -53,7 +53,7 @@ const Scroller: React.FC = () => {
           </div>
           <div ref={scrollerRef}>
             <div
-              className="scroller padding-container max-container"
+              className="scroller padding-container max-container "
               data-direction="left"
               data-speed="slow"
             >

@@ -96,14 +96,14 @@ const Navbar = () => {
           leave="transition ease-in-out duration-300 transform"
           leaveFrom="translate-x-0" // Starts from the current position
           leaveTo="translate-x-full" // Moves to the right edge
-          className="absolute top-full right-0 mt-2 lg:hidden shadow-lg text-center rounded-2xl"
+          className="absolute top-full right-0 mt-2 lg:hidden shadow-lg text-center rounded-xl"
         >
-          <ul className="shadow-2xl shadow-black border-2 dark:border-orange-50 rounded-2xl bg-slate-200 p-2">
+          <ul className="shadow-2xl shadow-black rounded-2xl bg-slate-200 dark:bg-slate-800 px-2">
             {/* <h2 className="bold-24 pt-2">Navigation</h2> */}
             {NAV_LINKS.map((link) => (
               <li
                 key={link.key}
-                className="p-2 bold-20 text-black border-orange-50"
+                className="p-4 bold-20 "
               >
                 <Link
                   href={link.href}
