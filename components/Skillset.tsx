@@ -29,7 +29,7 @@ const Skillset = () => {
         <div className="flex w-full flex-col lg:w-[60%]">
           <div className="w-full flex flex-col items-start lg:w-[60%]">
             <div className="relative">
-              <h2 className="bold-40 lg:bold-64 mt-4">Skill Set</h2>
+              <h2 className="bold-40 lg:bold-64 mt-4">Services</h2>
             </div>
           </div>
 
