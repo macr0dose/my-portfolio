@@ -95,7 +95,7 @@ export const FOOTER_LINKS = [
       },
       {
         label: "Services",
-        value: "#skillset",
+        value: "#services",
       },
     ],
   },
