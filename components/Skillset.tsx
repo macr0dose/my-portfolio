@@ -5,7 +5,7 @@ import React from "react";
 const Skillset = () => {
   return (
     <section
-      id="skillset"
+      id="services"
       className="lg:mt-10 flex-col flexCenter overflow-hidden bg-skillset-bg bg-center bg-no-repeat py-24"
     >
       <div className="max-container padding-container relative w-full flex justify-end">

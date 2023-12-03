@@ -5,7 +5,6 @@ import Button from "./Button";
 import ContactForm from "./ContactForm";
 
 import { MouseEvent } from "react";
-import Scroller from "./Scroller";
 
 const smoothScroll = (e: MouseEvent<HTMLButtonElement>, href: string) => {
   e.preventDefault();

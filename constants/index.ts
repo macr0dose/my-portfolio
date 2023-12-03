@@ -3,6 +3,7 @@ export const NAV_LINKS = [
   { href: "#navbar", key: "home", label: "Home" },
   { href: "#projects", key: "projects", label: "Projects" },
   { href: "#about", key: "about", label: "About" },
+  { href: "#services", key: "services", label: "Services" },
   { href: "#contact", key: "contact", label: "Contact" },
 ];
 
@@ -93,7 +94,7 @@ export const FOOTER_LINKS = [
         value: "#projects",
       },
       {
-        label: "Skills",
+        label: "Services",
         value: "#skillset",
       },
     ],

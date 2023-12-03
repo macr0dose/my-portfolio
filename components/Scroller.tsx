@@ -40,7 +40,7 @@ const Scroller: React.FC = () => {
           data-direction="right"
           data-speed="slow"
         >
-          <div className="scroller__inner">
+          <div className="scroller__inner dark:bg-gradient-to-b from-transparent to-slate-800/50">
             <img src="/html.svg" alt="html" width={150} height={150} />
             <img src="/css.svg" alt="css" width={150} height={150} />
             <img src="/javascript.svg" alt="js" width={150} height={150} />

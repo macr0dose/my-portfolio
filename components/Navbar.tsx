@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <nav
       id="navbar"
-      className="flex justify-between items-center max-w-full px-4 py-5 relative z-30 padding-container max-container"
+      className="flex justify-between items-center max-w-full px-4 py-5 relative z-30 padding-container max-container lg"
     >
       <Link href="/" onClick={(e) => smoothScroll(e, "#navbar")}>
         <Image
@@ -98,12 +98,12 @@ const Navbar = () => {
           leaveTo="translate-x-full" // Moves to the right edge
           className="absolute top-full right-0 mt-2 lg:hidden shadow-lg text-center rounded-xl"
         >
-          <ul className="shadow-2xl shadow-black rounded-2xl bg-slate-200 dark:bg-slate-800 px-2">
+          <ul className="shadow-2xl shadow-black rounded-2xl bg-slate-200 px-2">
             {/* <h2 className="bold-24 pt-2">Navigation</h2> */}
             {NAV_LINKS.map((link) => (
               <li
                 key={link.key}
-                className="p-4 bold-20 "
+                className="p-4 bold-20 text-black"
               >
                 <Link
                   href={link.href}
