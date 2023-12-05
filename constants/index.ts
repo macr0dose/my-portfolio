@@ -52,7 +52,7 @@ export const PROJECTS = [
   },
   {
     title: "AI Prompt Sharing with user profiles",
-    href: "https://promptshare-one.vercel.app/",
+    href: "https://promptshare.netlify.app",
     icon: "/project3.svg",
     variant: "green",
     description: "",
