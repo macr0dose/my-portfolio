@@ -4,22 +4,26 @@ import { PROJECTS } from "@/constants";
 import Image from "next/image";
 
 const Projects = () => {
-
   const handleProjectClick = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
-    <div id="projects" className="flex flex-col padding-container max-container">
+    <div
+      id="projects"
+      className="flex flex-col padding-container max-container"
+    >
       <div className="flex-1 container mx-auto p-4">
         <h1 className="bold-40 lg:bold-64">My Projects</h1>
         <div className="grid grid-cols-1 mt-8 mb-8 rounded-xl">
           <div className="mt-10 hover-container bg-gradient-to-t from-transparent to-slate-50 dark:to-slate-800 rounded-2xl">
             <ul className="projects-grid p-8">
-              {PROJECTS.map((project) => (
-                <li key={project.title}
-                    className="projects-hover items-center text-center cursor-pointer"
-                    onClick={() => handleProjectClick(project.href)}>
+              {PROJECTS.map((project, index) => (
+                <li
+                  key={`${project.title}-${index}`} // Combining title and index for a unique key
+                  className="projects-hover items-center text-center cursor-pointer"
+                  onClick={() => handleProjectClick(project.href)}
+                >
                   <h2 className="projects-title hover-text">{project.title}</h2>
                   <Image
                     src={project.icon}
