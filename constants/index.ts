@@ -35,7 +35,7 @@ export const SKILLSET = [
 // PROJECTS SECTION
 export const PROJECTS = [
   {
-  title: "Create and edit projects, user profiles and bio.",
+  title: "Share/edit projects with user profiles.",
   href: "https://mongoflex.vercel.app/",
   icon: "/project6.svg",
   variant: "orange",
@@ -72,7 +72,7 @@ export const PROJECTS = [
     description: "",
   },
   {
-    title: "Camping and Adventure landing page UI/UX",
+    title: "Concept landing page UI/UX",
     href: "http://camp-travel-one.vercel.app",
     icon: "/project5.svg",
     variant: "orange",
